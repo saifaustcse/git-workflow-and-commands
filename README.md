@@ -6,13 +6,8 @@
  
     <div  style="text-align: center;">
           <img src="https://github.com/saifaustcse/Basic-git-commands/blob/main/images/workflow.png" width="500" height="300">
+          Workspace ↔ Staging ↔ Local Repository ↔ Remote Repository
     <div>
-     Here are some of the most important terms are:
-
-       Workspace
-       Index / Stage
-       Repository
-       Remote
 
 2. ### Create a New Repository
 
