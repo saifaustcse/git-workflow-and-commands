@@ -14,16 +14,21 @@
        # Download a project and its entire code history.
        $ git clone [url]
 
-    Pros:
 
-        * Each stage are clearly defined
-        * Process and results are well documented.
-        * Simple and easy to understand and use.
-        * Easy to manage due to the rigidity of the model. 
-   
-    **[⬆ Back to Top](#table-of-contents)**
+2. ### Configuration
+    The setting file for Git is .gitconfig, which can be placed under the user's home directory (global configuration) or under the project directory (project configuration).
 
+       # Display the current Git configuration.
+       $ git config --list
+      
+       # Edit Git Configuration File.
+       $ git config -e [--global]
+       
+       # Set the user information when submitting code.
+       $ git config [--global] user.name "[name]"
+       $ git config [--global] user.email "[email address]"
 
+2. Configuration
 11. ### References
 
     I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
