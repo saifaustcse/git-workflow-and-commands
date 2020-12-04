@@ -6,9 +6,10 @@
  
     <div  style="text-align: center;">
           <img src="https://github.com/saifaustcse/Basic-git-commands/blob/main/images/workflow.png" width="750" height="450">
-          <span > Workspace ↔ Staging ↔ Local Repository ↔ Remote Repository  </span>
+          <span style="padding-left: 200px;" > Workspace ↔ Staging ↔ Local Repository ↔ Remote Repository  </span>
     <div>
 
+    
 2. ### Create a New Repository
 
        # Create a new Git repository in the current directory.
