@@ -39,10 +39,6 @@
        # Add all the files in the current directory to the Index.
        $ git add .
 
-       # Being asked to confirm it before adding every change.
-       # For multiple changes to the same file, split submission is supported.
-       $ git add -p
-
        # Delete the files in the Workspace and put this deletion into the Index.
        $ git rm [file1] [file2] ...
 
@@ -53,7 +49,28 @@
        $ git mv [file-original] [file-renamed]
 
 
-2. Configuration
+4. ### Code Submission
+
+       # Submit the code from the Index to the Repository.
+       $ git commit -m [message]
+
+       # Submit the specified file from the Index to the Repository.
+       $ git commit [file1] [file2] ... -m [message]
+
+       # Submit the changes in the Workspace since the last commit, to the Repository directly.
+       $ git commit -a
+
+       # Display all diff information when submitting.
+       $ git commit -v
+
+       # Use a new commit to take the place of the last commit.
+       # If the code doesn't have any new changes, it will be used to rewrite the commit information of the last commit.
+       $ git commit --amend -m [message]
+
+       # Redo the last commit, including the new changes to the specified file.
+       $ git commit --amend [file1] [file2] ...
+
+
 11. ### References
 
     I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
