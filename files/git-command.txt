@@ -1,1 +1,113 @@
-﻿#. This directory/folder is igonere by git
+﻿#. check directory
+  
+   ls
+ 
+#. rename app because of iOS default app
+  
+   mv boibazar.app boibazar-app
+
+#. git clone https://saifaust@gitlab.com/tushamsbe/boibazar.app.git
+
+#. git status
+
+#. git branch
+   git branch -a (all branches)
+   git branch -r
+
+
+#. git checkout branch_name
+
+#. create new brunch and checkout from current branch
+
+   git checkout -b branch_name
+
+#. Fetches all from the remote repository that are not present in the local one. 
+   
+   git fetch origin branch_name
+
+
+#. Merges one or more local branches into your current local branch and automatically creates a   
+   new commit if there are no conflicts. 
+   
+   git merge branch_name
+
+
+#. Fetches all the files from the remote repository and merges it with your local one.  
+   This command is equal to the git fetch and the git merge sequence.
+   
+   git pull origin branch_name
+
+
+#. Git merge two local branches
+   step 1:   git pull origin branch_a
+   step 2:   git checkout branch_b
+   step 3:   git pull origin branch_b
+   step 4:   git merge branch_a
+
+
+#. Merge a remote branch into another local branch
+
+   step 1:   git pull origin branch_b
+   step 2:   git merge origin branch_a
+  
+   
+#. Adds files changes in your working directory to your index.
+   git add .    --> new files and modifications, without deletions
+
+
+#. Removes files from your index and your working directory so they will not be 
+   tracked. 
+
+   git rm filename
+
+
+#. Takes all of the changes written in the index, creates a new commit object 
+   pointing to it and sets the branch to point to that new commit. 
+   git commit -a —> committing all changes
+   git commit -m "commit message"
+   git commit -am ‘commit message’, —> equals to git commit -a and git commit -m  "commit message"
+   
+
+#. git push 
+
+   git push origin branch_name
+
+#. Setting your email address for every repository on your computer
+
+   git config --global user.email "email@example.com"
+
+#. Confirm that you have set the email address correctly in Git:
+
+   git config --global user.email
+   > email@example.com
+
+#. Setting your Git username for every repository on your compute
+
+   git config --global user.name "Mona Lisa"
+
+#. Confirm that you have set the Git username correctly:
+
+   git config --global user.name
+   > Mona Lisa
+
+
+#. Revert a commit on remote branch
+
+   git checkout staging
+   git revert abc123
+   git push
+
+
+   or 
+
+  git checkout staging
+  git reset --hard HEAD^
+  git push -f
+
+
+// delete branch locally
+git branch -d localBranchName
+
+// delete branch remotely
+git push origin --delete remoteBranchName
+

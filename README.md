@@ -70,6 +70,51 @@
        # Redo the last commit, including the new changes to the specified file.
        $ git commit --amend [file1] [file2] ...
 
+4. ### Branch
+
+       # List all local branches.
+       $ git branch
+
+       # List all remote branches.
+       $ git branch -r
+
+       # List all local branches and remote branches.
+       $ git branch -a
+
+       # Create a new branch, but still stay in the current branch.
+       $ git branch [branch-name]
+
+       # Create a new branch and switch to the branch.
+       $ git checkout -b [branch]
+
+       # Create a new branch, pointing to the specified commit.
+       $ git branch [branch] [commit]
+
+       # Create a new branch to establish a tracking relationship with the specified remote branch.
+       $ git branch --track [branch] [remote-branch]
+
+       # Switch to the specified branch and update the workspace.
+       $ git checkout [branch-name]
+
+       # Switch to the previous branch.
+       $ git checkout -
+
+       # Establish a tracking relationship between the existing branch and the specified remote branch
+       $ git branch --set-upstream [branch] [remote-branch]
+
+       # merge the specified branch to the current branch.
+       $ git merge [branch]
+
+       # Select a commit to be merged into the current branch.
+       $ git cherry-pick [commit]
+
+       # Delete the branch.
+       $ git branch -d [branch-name]
+
+       # Delete the remote branch.
+       $ git push origin --delete [branch-name]
+       $ git branch -dr [remote/branch]
+
 
 11. ### References
 
