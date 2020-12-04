@@ -126,25 +126,170 @@
        $ git push origin --delete [branch-name]
        $ git branch -dr [remote/branch]
 
+6. ### Tag
+
+       # List all tags.
+       $ git tag
+
+       # Create a new tag in the current commit.
+       $ git tag [tag]
+
+       # Create a new tag in the specified commit.
+       $ git tag [tag] [commit]
+
+       # Delete the local tag.
+       $ git tag -d [tag]
+
+       # Delete the remote tag.
+       $ git push origin :refs/tags/[tagName]
+
+       # View the tag information.
+       $ git show [tag]
+
+       # Commit the specified tag.
+       $ git push [remote] [tag]
+
+       # Commit all tags.
+       $ git push [remote] --tags
+
+       # Create a new branch pointing to a certain tag
+       $ git checkout -b [branch] [tag]
+
+6. ### View Information
+
+       # Display the changed files.
+       $ git status
+
+       # Display the version history of the current branch.
+       $ git log
+
+       # Display the commit history, and the changed files for each commit.
+       $ git log --stat
+
+       # Search commit history, according the keyword.
+       $ git log -S [keyword]
+
+       # Display all changes since a certain commit, occupying one line for one commit.
+       $ git log [tag] HEAD --pretty=format:%s
+
+       # Display all changes since a certain commit, and its "commit description" must meet the search criteria.
+       $ git log [tag] HEAD --grep feature
+
+       # Display the version history of a certain file.
+       $ git log --follow [file]
+       $ git whatchanged [file]
+
+       # Display each diff related to the specified file.
+       $ git log -p [file]
+
+       # Display the past 5 commits.
+       $ git log -5 --pretty --oneline
+
+       # Display all the users who have committed, sorted by number of commits.
+       $ git shortlog -sn
+
+       # Display when and by whom the specified file was modified.
+       $ git blame [file]
+
+       # Display the difference between the Index and the Workspace.
+       $ git diff
+
+       # Display the difference between the Index and the previous commit.
+       $ git diff --cached [file]
+
+       # Display the difference between the Workspace and the latest commit of the current branch.
+       $ git diff HEAD
+
+       # Display the difference between two commits.
+       $ git diff [first-branch]...[second-branch]
+
+       # Display how many lines of code you have written today.
+       $ git diff --shortstat "@{0 day ago}"
+
+       # Show the metadata and the changed content for a certain commit.
+       $ git show [commit]
+
+       # Show the changed file for a certain commit.
+       $ git show --name-only [commit]
+
+       # Show the contents of a certain file for a certain commit.
+       $ git show [commit]:[filename]
+
+       # Show the latest commits of the current branch.
+       $ git reflog
+
+
+6. ### Remote Synchronization
+
+       # Download all changes from the Remote Repository.
+       $ git fetch [remote]
+
+       # Display all the Remote Repositories.
+       $ git remote -v
+
+       # Display the information about a certain Remote Repository.
+       $ git remote show [remote]
+
+       # Add a new Remote Repository and name it.
+       $ git remote add [shortname] [url]
+
+       # Retrieve the changes to the Remote Repository and merge with the local branch.
+       $ git pull [remote] [branch]
+
+       # Push the local specified branch to the Remote Repository.
+       $ git push [remote] [branch]
+
+       # Force to push the current branch to the Remote Repository, even if there is a conflict
+       $ git push [remote] --force
+
+       # Push all the branches to the Remote Repository.
+       $ git push [remote] --all
+
+6. ### Remote Synchronization
+
+       # Restore the specified file of the Index to the Workspace.
+       $ git checkout [file]
+
+       # Restore the specified file of a certain commit to the Index and Workspace.
+       $ git checkout [commit] [file]
+
+       # Restore all the files in the Index to the Workspace.
+       $ git checkout .
+
+       # Reset the specified file in the Index, keeping consistent with the previous commit, but remaining the workspace unchanged.
+       $ git reset [file]
+
+       # Reset the Index and workspace, keeping consistent with the last commit.
+       $ git reset --hard
+
+       # Reset the pointer of the current branch to pointing the specified commit while resetting the Index, but the workspace remains unchanged.
+       $ git reset [commit]
+
+       # Reset the HEAD of the current branch to the specified commit while resetting the Index and Workspace, keeping consistent with the specified commit.
+       $ git reset --hard [commit]
+
+       # Reset the current HEAD to the specified commit, remaining the Index and Workspace unchanged.
+       $ git reset --keep [commit]
+
+       # Create a new commit to undo the specified commit.
+       # All changes of the latter will be offset by the former and applied to the current branch.
+       $ git revert [commit]
+
+       # Remove the uncommitted changes temporarily and move them in later.
+       $ git stash
+       $ git stash pop
+
+
+6. ### Others
+
+       # Generate a archive for releasing.
+       $ git archive
 
 9. ### References
 
     I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
  
-     * [tutorialspoint](https://www.tutorialspoint.com/sdlc/index.htm)
-     * [Top 12 SDLC Methodologies with Pros and Cons](https://www.techuz.com/blog/top-12-sdlc-methodologies-with-pros-and-cons/)
-     * [SDLC Methodologies](https://svitla.com/blog/sdlc-methodologies)
-     * [Top 6 SDLC Methodologies And How To Choose The Best One?](https://www.goodcore.co.uk/blog/sdlc-methodologies/)
-     * [Top 7 SDLC Methodologies](https://hackr.io/blog/sdlc-methodologies)
-     * [SDLC Models Explained: Agile, Waterfall, V-Shaped, Iterative, Spiral](https://existek.com/blog/sdlc-models/)
-     * [TOP SOFTWARE DEVELOPMENT MODELS: THEIR PROS & CONS](https://cybercraftinc.com/blog/top-software-development-models-their-pros-cons)
-     * [SDLC (Software Development Life Cycle) Phases, Methodologies, Process, And Models](https://www.softwaretestinghelp.com/software-development-life-cycle-sdlc/)
-    * [Waterfall vs. Incremental vs. Spiral vs. Rad Model: Key Difference](https://www.guru99.com/compare-waterfall-vs-incremental-vs-spiral-vs-rad.html)
-    * [What are the Different Types of Agile Methodologies?](https://www.wrike.com/project-management-guide/faq/what-are-the-different-types-of-agile-methodologies/)
-    * [Agile Methodologies](https://www.blueprintsys.com/agile-development-101/agile-methodologies)
-    * [Difference between V-model and Waterfall model](https://www.geeksforgeeks.org/difference-between-v-model-and-waterfall-model/)
-    * [Choosing the right Software development life cycle model](https://melsatar.blog/2012/03/21/choosing-the-right-software-development-life-cycle-model/?fbclid=IwAR1mpCDGUxD0CuhdSWtgtHsUEXQWMtPi4aWCdG03P1p-bYoXXY9M_geNZl4)
-    * [Spiral Model – What Is SDLC Spiral Model?](https://www.softwaretestinghelp.com/spiral-model-what-is-sdlc-spiral-model/)
-
-    **[⬆ Back to Top](#table-of-contents)**
-
+     * [git-most-frequently-used-commands](https://medium.com/analytics-vidhya/git-most-frequently-used-commands-9df9f200c235)
+     * [atlassian](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+     * [ercankaracelik](https://ercankaracelik.wordpress.com/2018/12/08/basic-git-commands/)
+     * [tutorialdocs](hhttps://www.tutorialdocs.com/article/git-basic-command-list.html)
