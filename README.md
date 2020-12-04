@@ -5,7 +5,7 @@
 1. ### Workflow
  
     <div  style="text-align: center;">
-          <img src="https://github.com/saifaustcse/SDLC_Methodologies/blob/master/images/workflow.png" width="500" height="300">
+          <img src="https://github.com/saifaustcse/Basic-git-commands/blob/main/images/workflow.png" width="500" height="300">
     <div>
      Here are some of the most important terms are:
 
