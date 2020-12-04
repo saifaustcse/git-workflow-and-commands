@@ -9,31 +9,30 @@
           <span style="padding-left: 200px;" > Workspace ↔ Staging ↔ Local Repository ↔ Remote Repository  </span>
     <div>
 
-    
-2. ### Create a New Repository
 
-       # Create a new Git repository in the current directory.
-       $ git init
-       
-       # Create a new directory and initialize it to the Git repository.
-       $ git init [project-name]
-       
-       # Download a project and its entire code history.
-       $ git clone [url]
-
-
-3. ### Configuration
-    The setting file for Git is .gitconfig, which can be placed under the user's home directory (global configuration) or under the project directory (project configuration).
+2. ### Configuration
+   
+   git config that lets you get and set configuration variables that control all aspects of how Git looks and operates.
 
        # Display the current Git configuration.
        $ git config --list
-      
-       # Edit Git Configuration File.
-       $ git config -e [--global]
        
        # Set the user information when submitting code.
-       $ git config [--global] user.name "[name]"
-       $ git config [--global] user.email "[email address]"
+       git config --global user.name "Saiful Islam"
+       git config --global user.email "saifaustcse26@gmail.com"
+       
+       # Check
+       git config --global user.name
+       git config --global user.email
+
+3. ### Create a Repository in git hub/git lab
+
+       # [How to create git hub repository.](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
+       
+3. ### Clone a Repository
+
+       # Download an existing git repository to your local computer with its entire code history.
+       $ git clone [url]
 
 4. ### Add/Delete Files
 
@@ -77,9 +76,9 @@
        # Redo the last commit, including the new changes to the specified file.
        $ git commit --amend [file1] [file2] ...
 
-6. ### Branch
+6. ### Branching
 
-       # List all local branches.
+       # List all local branches. (the asterisk denotes the current branch)
        $ git branch
 
        # List all remote branches.
@@ -94,33 +93,30 @@
        # Create a new branch and switch to the branch.
        $ git checkout -b [branch]
 
-       # Create a new branch, pointing to the specified commit.
-       $ git branch [branch] [commit]
-
-       # Create a new branch to establish a tracking relationship with the specified remote branch.
-       $ git branch --track [branch] [remote-branch]
-
        # Switch to the specified branch and update the workspace.
        $ git checkout [branch-name]
 
        # Switch to the previous branch.
        $ git checkout -
 
-       # Establish a tracking relationship between the existing branch and the specified remote branch
-       $ git branch --set-upstream [branch] [remote-branch]
+       # Delete the branch.
+       $ git branch -d [branch-name]
+       
+       # Delete the remote branch.
+       $ git push origin --delete [branch-name]
+       $ git branch -dr [remote/branch]
+
+       
+6. ### Merging
 
        # merge the specified branch to the current branch.
        $ git merge [branch]
 
+       # merge a branch into a target branch
+       $ git merge [source branch] [target branch]
+
        # Select a commit to be merged into the current branch.
        $ git cherry-pick [commit]
-
-       # Delete the branch.
-       $ git branch -d [branch-name]
-
-       # Delete the remote branch.
-       $ git push origin --delete [branch-name]
-       $ git branch -dr [remote/branch]
 
 6. ### Tag
 
