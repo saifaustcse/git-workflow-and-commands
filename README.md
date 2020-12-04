@@ -28,6 +28,31 @@
        $ git config [--global] user.name "[name]"
        $ git config [--global] user.email "[email address]"
 
+3. ### Add/Delete Files
+
+       # Add the specified file to the Index.
+       $ git add [file1] [file2] ...
+
+       # Add the specified directory to the Index, including subdirectories.
+       $ git add [dir]
+
+       # Add all the files in the current directory to the Index.
+       $ git add .
+
+       # Being asked to confirm it before adding every change.
+       # For multiple changes to the same file, split submission is supported.
+       $ git add -p
+
+       # Delete the files in the Workspace and put this deletion into the Index.
+       $ git rm [file1] [file2] ...
+
+       # Stop tracking the specified file, but the file will be remained in the Workspace.
+       $ git rm --cached [file]
+
+       # Rename the file and put the renamed name into the Index.
+       $ git mv [file-original] [file-renamed]
+
+
 2. Configuration
 11. ### References
 
