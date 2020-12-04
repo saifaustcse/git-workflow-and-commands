@@ -2,8 +2,19 @@
 
 > If you think that these can be improved in anyway, please do suggest. Pull Request are highly appreciated. Find me if you wish [@Saif(https://www.linkedin.com/in/saif-aust-cse/).
 
+1. ### Workflow
+ 
+    <div  style="text-align: center;">
+          <img src="https://github.com/saifaustcse/SDLC_Methodologies/blob/master/images/workflow.png" width="500" height="300">
+    <div>
+     Here are some of the most important terms are:
 
-1. ### Create a New Repository
+       Workspace
+       Index / Stage
+       Repository
+       Remote
+
+2. ### Create a New Repository
 
        # Create a new Git repository in the current directory.
        $ git init
@@ -15,7 +26,7 @@
        $ git clone [url]
 
 
-2. ### Configuration
+3. ### Configuration
     The setting file for Git is .gitconfig, which can be placed under the user's home directory (global configuration) or under the project directory (project configuration).
 
        # Display the current Git configuration.
@@ -28,7 +39,7 @@
        $ git config [--global] user.name "[name]"
        $ git config [--global] user.email "[email address]"
 
-3. ### Add/Delete Files
+4. ### Add/Delete Files
 
        # Add the specified file to the Index.
        $ git add [file1] [file2] ...
@@ -49,7 +60,7 @@
        $ git mv [file-original] [file-renamed]
 
 
-4. ### Code Submission
+5. ### Code Submission
 
        # Submit the code from the Index to the Repository.
        $ git commit -m [message]
@@ -70,7 +81,7 @@
        # Redo the last commit, including the new changes to the specified file.
        $ git commit --amend [file1] [file2] ...
 
-4. ### Branch
+6. ### Branch
 
        # List all local branches.
        $ git branch
@@ -116,7 +127,7 @@
        $ git branch -dr [remote/branch]
 
 
-11. ### References
+9. ### References
 
     I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
  
