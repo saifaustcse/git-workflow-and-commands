@@ -7,8 +7,10 @@
 
        # Create a new Git repository in the current directory.
        $ git init
+       
        # Create a new directory and initialize it to the Git repository.
        $ git init [project-name]
+       
        # Download a project and its entire code history.
        $ git clone [url]
 
