@@ -80,6 +80,8 @@
        $ git commit --amend [file1] [file2] ...
 
        git reset HEAD~1
+       git reset HEAD~1
+
 
 6. ### Branching
 

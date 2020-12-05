@@ -1,1 +1,1 @@
-﻿#. This directory/folder is igonere by git
+﻿#. This directory/folder is igonere by git ignored
