@@ -28,6 +28,7 @@
 3. ### Create a Repository in git hub/git lab
 
        # [How to create git hub repository.](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
+       * [How to create git hub repository](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
        
 3. ### Clone a Repository
 
