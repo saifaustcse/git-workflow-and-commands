@@ -111,71 +111,6 @@
         # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
         $ git pull origin [branch]
 
-12. ### View Information
-
-        # Display the changed files.
-        $ git status
-
-        # Display the version history of the current branch.
-        $ git log
-
-        # Display the commit history, and the changed files for each commit.
-        $ git log --stat
-
-        # Search commit history, according the keyword.
-        $ git log -S [keyword]
-
-        # Display all changes since a certain commit, occupying one line for one commit.
-        $ git log [tag] HEAD --pretty=format:%s
-
-        # Display all changes since a certain commit, and its "commit description" must meet the search criteria.
-        $ git log [tag] HEAD --grep feature
-
-        # Display the version history of a certain file.
-        $ git log --follow [file]
-        $ git whatchanged [file]
-
-        # Display each diff related to the specified file.
-        $ git log -p [file]
-
-        # Display the past 5 commits.
-        $ git log -5 --pretty --oneline
-
-        # Display all the users who have committed, sorted by number of commits.
-        $ git shortlog -sn
-
-        # Display when and by whom the specified file was modified.
-        $ git blame [file]
-
-        # Display the difference between the Index and the Workspace.
-        $ git diff
-
-        # Display the difference between the Index and the previous commit.
-        $ git diff --cached [file]
-
-        # Display the difference between the Workspace and the latest commit of the current branch.
-        $ git diff HEAD
-
-        # Display the difference between two commits.
-        $ git diff [first-branch]...[second-branch]
-
-        # Display how many lines of code you have written today.
-        $ git diff --shortstat "@{0 day ago}"
-
-        # Show the metadata and the changed content for a certain commit.
-        $ git show [commit]
-
-        # Show the changed file for a certain commit.
-        $ git show --name-only [commit]
-
-        # Show the contents of a certain file for a certain commit.
-        $ git show [commit]:[filename]
-
-        # Show the latest commits of the current branch.
-        $ git reflog
-
-
-
 12. ### Branching
 
         # List all local branches. (the asterisk denotes the current branch)
@@ -206,6 +141,22 @@
         $ git push origin --delete [branch-name]
         $ git branch -dr [remote/branch]
 
+12. ### View Information
+
+        # Display the changed files.
+        $ git status
+
+        # Display the version history of the current branch.
+        $ git log
+
+        # Display the past 5 commits.
+        $ git log -5 --pretty --oneline
+
+        # Display all the users who have committed, sorted by number of commits.
+        $ git shortlog -sn
+
+        # Show the latest commits of the current branch.
+        $ git reflog
 
 13. ### Ignore files and folder 
 
@@ -244,7 +195,6 @@
 
         # Create a new branch pointing to a certain tag
         $ git checkout -b [branch] [tag]
-
 
 
 
