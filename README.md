@@ -105,145 +105,145 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 10. ### Workspace synchronization from Repository (Workspace <-- Repository)
 
-       # merge the specified branch to the current branch.
-       $ git merge [branch]
+        # merge the specified branch to the current branch.
+        $ git merge [branch]
 
-       # merge a branch into a target branch
-       $ git merge [source branch] [target branch]
+        # merge a branch into a target branch
+        $ git merge [source branch] [target branch]
 
 11. ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
-       # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
-       $ git pull origin [branch]
+        # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
+        $ git pull origin [branch]
 
 12. ### Branching
 
-       # List all local branches. (the asterisk denotes the current branch)
-       $ git branch
+        # List all local branches. (the asterisk denotes the current branch)
+        $ git branch
 
-       # List all remote branches.
-       $ git branch -r
+        # List all remote branches.
+        $ git branch -r
 
-       # List all local branches and remote branches.
-       $ git branch -a
+        # List all local branches and remote branches.
+        $ git branch -a
 
-       # Create a new branch, but still stay in the current branch.
-       $ git branch [branch-name]
+        # Create a new branch, but still stay in the current branch.
+        $ git branch [branch-name]
 
-       # Create a new branch and switch to the branch.
-       $ git checkout -b [branch]
+        # Create a new branch and switch to the branch.
+        $ git checkout -b [branch]
 
-       # Switch to the specified branch and update the workspace.
-       $ git checkout [branch-name]
+        # Switch to the specified branch and update the workspace.
+        $ git checkout [branch-name]
 
-       # Switch to the previous branch.
-       $ git checkout -
+        # Switch to the previous branch.
+        $ git checkout -
 
-       # Delete the branch.
-       $ git branch -d [branch-name]
+        # Delete the branch.
+        $ git branch -d [branch-name]
 
-       # Delete the remote branch.
-       $ git push origin --delete [branch-name]
-       $ git branch -dr [remote/branch]
+        # Delete the remote branch.
+        $ git push origin --delete [branch-name]
+        $ git branch -dr [remote/branch]
 
 13. ### View Information
 
-       # Display the changed files.
-       $ git status
+        # Display the changed files.
+        $ git status
 
-       # Display the version history of the current branch.
-       $ git log
+        # Display the version history of the current branch.
+        $ git log
 
-       # Display the past 5 commits.
-       $ git log -5 --pretty --oneline
+        # Display the past 5 commits.
+        $ git log -5 --pretty --oneline
 
-       # Display all the users who have committed, sorted by number of commits.
-       $ git shortlog -sn
+        # Display all the users who have committed, sorted by number of commits.
+        $ git shortlog -sn
 
-       # Show the latest commits of the current branch.
-       $ git reflog
+        # Show the latest commits of the current branch.
+        $ git reflog
 
 14. ### Ignore files and folder 
 
-       # Delete the files in the Workspace and put this deletion into the Staging.
-       $ git rm [file1] [file2] ...
+        # Delete the files in the Workspace and put this deletion into the Staging.
+        $ git rm [file1] [file2] ...
 
 
-       # Stop tracking the specified file, but the file will be remained in the Workspace.
-       $ git rm --cached [file]
+        # Stop tracking the specified file, but the file will be remained in the Workspace.
+        $ git rm --cached [file]
 
 15. ### Tag
 
-       # List all tags.
-       $ git tag
+        # List all tags.
+        $ git tag
 
-       # Create a new tag in the current commit.
-       $ git tag [tag]
+        # Create a new tag in the current commit.
+        $ git tag [tag]
 
-       # Create a new tag in the specified commit.
-       $ git tag [tag] [commit]
+        # Create a new tag in the specified commit.
+        $ git tag [tag] [commit]
 
-       # Delete the local tag.
-       $ git tag -d [tag]
+        # Delete the local tag.
+        $ git tag -d [tag]
 
-       # Delete the remote tag.
-       $ git push origin :refs/tags/[tagName]
+        # Delete the remote tag.
+        $ git push origin :refs/tags/[tagName]
 
-       # View the tag information.
-       $ git show [tag]
+        # View the tag information.
+        $ git show [tag]
 
-       # Commit the specified tag.
-       $ git push [remote] [tag]
+        # Commit the specified tag.
+        $ git push [remote] [tag]
 
-       # Commit all tags.
-       $ git push [remote] --tags
+        # Commit all tags.
+        $ git push [remote] --tags
 
-       # Create a new branch pointing to a certain tag
-       $ git checkout -b [branch] [tag]
+        # Create a new branch pointing to a certain tag
+        $ git checkout -b [branch] [tag]
 
 
 16. ### Revoke
 
-       # Restore the specified file of the Staging to the Workspace.
-       $ git checkout [file]
+        # Restore the specified file of the Staging to the Workspace.
+        $ git checkout [file]
 
-       # Restore the specified file of a certain commit to the Staging and Workspace.
-       $ git checkout [commit] [file]
+        # Restore the specified file of a certain commit to the Staging and Workspace.
+        $ git checkout [commit] [file]
 
-       # Restore all the files in the Staging to the Workspace.
-       $ git checkout .
+        # Restore all the files in the Staging to the Workspace.
+        $ git checkout .
 
-       # Reset the specified file in the Staging, keeping consistent with the previous commit, but remaining the workspace unchanged.
-       $ git reset [file]
+        # Reset the specified file in the Staging, keeping consistent with the previous commit, but remaining the workspace unchanged.
+        $ git reset [file]
 
-       # Reset the Staging and workspace, keeping consistent with the last commit.
-       $ git reset --hard
+        # Reset the Staging and workspace, keeping consistent with the last commit.
+        $ git reset --hard
 
-       # Reset the pointer of the current branch to pointing the specified commit while resetting the Staging, but the workspace remains unchanged.
-       $ git reset [commit]
+        # Reset the pointer of the current branch to pointing the specified commit while resetting the Staging, but the workspace remains unchanged.
+        $ git reset [commit]
 
-       # Reset the HEAD of the current branch to the specified commit while resetting the Staging and Workspace, keeping consistent with the specified commit.
-       $ git reset --hard [commit]
+        # Reset the HEAD of the current branch to the specified commit while resetting the Staging and Workspace, keeping consistent with the specified commit.
+        $ git reset --hard [commit]
 
-       # Reset the current HEAD to the specified commit, remaining the Staging and Workspace unchanged.
-       $ git reset --keep [commit]
+        # Reset the current HEAD to the specified commit, remaining the Staging and Workspace unchanged.
+        $ git reset --keep [commit]
 
-       # Create a new commit to undo the specified commit.
-       # All changes of the latter will be offset by the former and applied to the current branch.
-       $ git revert [commit]
+        # Create a new commit to undo the specified commit.
+        # All changes of the latter will be offset by the former and applied to the current branch.
+        $ git revert [commit]
 
-       # Remove the uncommitted changes temporarily and move them in later.
-       $ git stash
-       $ git stash pop
+        # Remove the uncommitted changes temporarily and move them in later.
+        $ git stash
+        $ git stash pop
 
 
 17. ### Others
 
-       # Select a commit to be merged into the current branch.
-       $ git cherry-pick [commit]
+        # Select a commit to be merged into the current branch.
+        $ git cherry-pick [commit]
 
-       # Generate a archive for releasing.
-       $ git archive
+        # Generate a archive for releasing.
+        $ git archive
 
 18. ### References
 
@@ -253,5 +253,5 @@ Though there are 1000’s of articles about git, I have written this article is 
      * [Atlassian](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
      * [Git-most-frequently-used-commands](https://medium.com/analytics-vidhya/git-most-frequently-used-commands-9df9f200c235)
      * [Ercankaracelik](https://ercankaracelik.wordpress.com/2018/12/08/basic-git-commands/)
-     * [Tutorialdocs](hhttps://www.tutorialdocs.com/article/git-basic-command-list.html)
+     * [Tutorialdocs](https://www.tutorialdocs.com/article/git-basic-command-list.html)
 
