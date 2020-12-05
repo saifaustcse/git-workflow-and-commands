@@ -43,7 +43,7 @@
        5- $ git remote add origin github.com/saifaustcse/new_repository
        6- $ git push -u origin master
 
-5. ### Add/Delete Files
+5. ### Workspace -- > Staging
 
        # Add the specified file from the current directory to the staging.
        $ git add [file1] [file2] ...
@@ -51,7 +51,7 @@
        # Add the specified directory from the current directory to the staging, including subdirectories.
        $ git add [dir]
 
-       # Add all the files from the current directory to the staging.
+       # Add all files (tracked or untracked) from the current directory to the staging.
        $ git add .
 
        # If unwanted files were added to the staging area but not yet committed.
@@ -59,7 +59,7 @@
        $ git reset HEAD file
 
 
-5. ### Code update local in branch
+5. ### Staging --> Repository
 
        # Submit the code from the staging to the Repository with a message
        $ git commit -m [message]
@@ -67,14 +67,20 @@
        # Submit the specified file from the staging to the Repository.
        $ git commit [file1] [file2] ... -m [message]
 
-       # Submit the changes from the Workspace since the last commit, to the Repository directly.
-       $ git commit -a
-
-       # Ads all tracked files to the staging area and commits them in one step..
-       $ git commit -am ‘commit message’
-
        # Display all diff information when submitting.
        $ git commit -v
+
+       # Redo the last commit.
+       $ git reset HEAD~1
+
+5. ### Workspace --> Repository
+
+       # Submit the changes after the last commit of all tracked files from the Workspace to the Repository directly.
+       $ git commit -am ‘commit message’
+
+       # For untracked files
+       $ git add .
+       $ git commit -am ‘commit message’
 
        # Redo the last commit.
        $ git reset HEAD~1
