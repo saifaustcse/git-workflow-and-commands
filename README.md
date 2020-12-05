@@ -6,7 +6,7 @@
  
     <div  style="text-align: center;">
           <img src="https://github.com/saifaustcse/Basic-git-commands/blob/main/images/workflow.png" width="750" height="450">
-          <span style="padding-left: 200px;" > Workspace ↔ Staging ↔ Local Repository ↔ Remote Repository  </span>
+          <span>           Workspace ↔ Index/Staging ↔ Local Repository ↔ Remote Repository  </span>
     <div>
 
 
@@ -197,7 +197,7 @@
         $ git checkout -b [branch] [tag]
 
 
-6. ### Remote Synchronization
+6. ### Revoke
 
        # Restore the specified file of the Index to the Workspace.
        $ git checkout [file]
