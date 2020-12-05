@@ -25,7 +25,7 @@
        git config --global user.name
        git config --global user.email
 
-3. ### Mange Repository
+3. ### Manage Repository
 
     Pocess 1: Create a Repository in git hub/git lab then Clone the Repository
 
@@ -46,7 +46,7 @@
 4. ### Adding files and folder (Workspace --> Staging)
 
        # Add the specified file from the current directory to the staging.
-       $ git add [file1] [file2] ...
+       $ git add [file1] [file2] [fileN]
 
        # Add the specified directory from the current directory to the staging, including subdirectories.
        $ git add [dir]
@@ -81,8 +81,14 @@
 
 7. ### Commit changes (Workspace <-- Staging <-- Repository )
 
-       # Redo the last commit.
+       # Undo the last commit.
        $ git reset HEAD~1
+
+8. ### Remote synchronization from Repository(Repository <-- Remotr)
+
+       # Undo the last commit.
+       $ git reset HEAD~1
+
 
 8. ### Repository synchronization from remote (Repository <-- Remote)
 
@@ -92,7 +98,17 @@
        # Download all remote branches.
        $ git fetch --all
 
-8. ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
+
+9. ### Workspace synchronization from Repository (Workspace <-- Repository)
+
+       # merge the specified branch to the current branch.
+       $ git merge [branch]
+
+       # merge a branch into a target branch
+       $ git merge [source branch] [target branch]
+
+
+10. ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
        # Retrieve the changes to the Remote Repository and merge with the local branch.
        $ git pull origin [branch]
@@ -102,6 +118,7 @@
 
        # Push all the branches to the Remote Repository.
        $ git push origin --all
+
 
 6. ### Remote branch synchronization from local
 
@@ -141,17 +158,6 @@
        # Delete the remote branch.
        $ git push origin --delete [branch-name]
        $ git branch -dr [remote/branch]
-       
-6. ### Merging
-
-       # merge the specified branch to the current branch.
-       $ git merge [branch]
-
-       # merge a branch into a target branch
-       $ git merge [source branch] [target branch]
-
-       # Select a commit to be merged into the current branch.
-       $ git cherry-pick [commit]
 
 
 5. ### Ignore files and folder 
@@ -297,6 +303,9 @@
 
        # Generate a archive for releasing.
        $ git archive
+
+             # Select a commit to be merged into the current branch.
+       $ git cherry-pick [commit]
 
 9. ### References
 
