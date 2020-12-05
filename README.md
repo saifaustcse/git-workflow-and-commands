@@ -1,4 +1,4 @@
-# Basic Git Workflow and Commands
+# Git Workflow and Commands
 
 Though there are 1000’s of articles about git, I have written this article is in order to document what I understood and how I understood which may help others as well.
 
@@ -10,7 +10,6 @@ Though there are 1000’s of articles about git, I have written this article is 
  
     <div  style="text-align: center;">
           <img src="https://github.com/saifaustcse/Basic-git-commands/blob/main/images/workflow.png" width="750" height="450">
-          <span>           Workspace ↔ Index/Staging ↔ Local Repository ↔ Remote Repository  </span>
     <div>
 
 
