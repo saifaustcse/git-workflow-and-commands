@@ -38,20 +38,20 @@
 
        1- $ cd to your Project
        2- $ git init
-       3- $ git add --all
+       3- $ git add --all or git add .
        4- $ git commit -m "first commit"
        5- $ git remote add origin github.com/saifaustcse/new_repository
        6- $ git push -u origin master
 
 5. ### Add/Delete Files
 
-       # Add the specified file to the Index.
+       # Add the specified file from the current directory to the staging.
        $ git add [file1] [file2] ...
 
-       # Add the specified directory to the Index, including subdirectories.
+       # Add the specified directory from the current directory to the staging, including subdirectories.
        $ git add [dir]
 
-       # Add all the files in the current directory to the Index.
+       # Add all the files from the current directory to the staging.
        $ git add .
 
        # If unwanted files were added to the staging area but not yet committed.
@@ -61,27 +61,23 @@
 
 5. ### Code update local in branch
 
-       # Submit the code from the Index to the Repository.
+       # Submit the code from the staging to the Repository with a message
        $ git commit -m [message]
-
-       # Submit the specified file from the Index to the Repository.
+      
+       # Submit the specified file from the staging to the Repository.
        $ git commit [file1] [file2] ... -m [message]
 
-       # Submit the changes in the Workspace since the last commit, to the Repository directly.
+       # Submit the changes from the Workspace since the last commit, to the Repository directly.
        $ git commit -a
+
+       # Ads all tracked files to the staging area and commits them in one step..
+       $ git commit -am ‘commit message’
 
        # Display all diff information when submitting.
        $ git commit -v
 
        # Redo the last commit.
        $ git reset HEAD~1
-
-       # Use a new commit to take the place of the last commit.
-       # If the code doesn't have any new changes, it will be used to rewrite the commit information of the last commit.
-       $ git commit --amend -m [message]
-
-       # Redo the last commit, including the new changes to the specified file.
-       $ git commit --amend [file1] [file2] ...
 
 
 6. ### Local branch synchronization from remote
@@ -163,7 +159,7 @@
 
        # Stop tracking the specified file, but the file will be remained in the Workspace.
        $ git rm --cached [file]
-       
+
 6. ### Tag
 
        # List all tags.
