@@ -79,7 +79,7 @@
        $ git add .
        $ git commit -am [message]
 
-7. ### Commit changes (Workspace <-- Staging <-- Repository )
+7. ### Undo Commit (Workspace <-- Staging <-- Repository )
 
        # Undo the last commit.
        $ git reset HEAD~1
@@ -90,7 +90,7 @@
        $ git push origin [branch]
 
 
-8. ### Repository synchronization from remote (Repository <-- Remote)
+9. ### Repository synchronization from remote (Repository <-- Remote)
 
        # Download specific branch.
        $ git fetch origin [branch]
@@ -99,7 +99,7 @@
        $ git fetch --all
 
 
-9. ### Workspace synchronization from Repository (Workspace <-- Repository)
+10. ### Workspace synchronization from Repository (Workspace <-- Repository)
 
        # merge the specified branch to the current branch.
        $ git merge [branch]
@@ -107,94 +107,13 @@
        # merge a branch into a target branch
        $ git merge [source branch] [target branch]
 
+11. ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
-10. ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
-
-       # Retrieve the changes to the Remote Repository and merge with the local branch.
+       # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
        $ git pull origin [branch]
 
-     
 
-
-6. ### Remote branch synchronization from local
-
-       # Push the local specified branch to the Remote Repository.
-       $ git push [remote] [branch]
-
-       # Push all the branches to the Remote Repository.
-       $ git push [remote] --all
-
-
-4. ### Branching
-
-       # List all local branches. (the asterisk denotes the current branch)
-       $ git branch
-
-       # List all remote branches.
-       $ git branch -r
-
-       # List all local branches and remote branches.
-       $ git branch -a
-
-       # Create a new branch, but still stay in the current branch.
-       $ git branch [branch-name]
-
-       # Create a new branch and switch to the branch.
-       $ git checkout -b [branch]
-
-       # Switch to the specified branch and update the workspace.
-       $ git checkout [branch-name]
-
-       # Switch to the previous branch.
-       $ git checkout -
-
-       # Delete the branch.
-       $ git branch -d [branch-name]
-       
-       # Delete the remote branch.
-       $ git push origin --delete [branch-name]
-       $ git branch -dr [remote/branch]
-
-
-5. ### Ignore files and folder 
-
-       # Delete the files in the Workspace and put this deletion into the Index.
-       $ git rm [file1] [file2] ...
-
-
-       # Stop tracking the specified file, but the file will be remained in the Workspace.
-       $ git rm --cached [file]
-
-6. ### Tag
-
-       # List all tags.
-       $ git tag
-
-       # Create a new tag in the current commit.
-       $ git tag [tag]
-
-       # Create a new tag in the specified commit.
-       $ git tag [tag] [commit]
-
-       # Delete the local tag.
-       $ git tag -d [tag]
-
-       # Delete the remote tag.
-       $ git push origin :refs/tags/[tagName]
-
-       # View the tag information.
-       $ git show [tag]
-
-       # Commit the specified tag.
-       $ git push [remote] [tag]
-
-       # Commit all tags.
-       $ git push [remote] --tags
-
-       # Create a new branch pointing to a certain tag
-       $ git checkout -b [branch] [tag]
-
-6. ### View Information
+12. ### View Information
 
        # Display the changed files.
        $ git status
@@ -256,6 +175,77 @@
 
        # Show the latest commits of the current branch.
        $ git reflog
+
+
+
+12. ### Branching
+
+       # List all local branches. (the asterisk denotes the current branch)
+       $ git branch
+
+       # List all remote branches.
+       $ git branch -r
+
+       # List all local branches and remote branches.
+       $ git branch -a
+
+       # Create a new branch, but still stay in the current branch.
+       $ git branch [branch-name]
+
+       # Create a new branch and switch to the branch.
+       $ git checkout -b [branch]
+
+       # Switch to the specified branch and update the workspace.
+       $ git checkout [branch-name]
+
+       # Switch to the previous branch.
+       $ git checkout -
+
+       # Delete the branch.
+       $ git branch -d [branch-name]
+       
+       # Delete the remote branch.
+       $ git push origin --delete [branch-name]
+       $ git branch -dr [remote/branch]
+
+
+13. ### Ignore files and folder 
+
+       # Delete the files in the Workspace and put this deletion into the Index.
+       $ git rm [file1] [file2] ...
+
+
+       # Stop tracking the specified file, but the file will be remained in the Workspace.
+       $ git rm --cached [file]
+
+14. ### Tag
+
+       # List all tags.
+       $ git tag
+
+       # Create a new tag in the current commit.
+       $ git tag [tag]
+
+       # Create a new tag in the specified commit.
+       $ git tag [tag] [commit]
+
+       # Delete the local tag.
+       $ git tag -d [tag]
+
+       # Delete the remote tag.
+       $ git push origin :refs/tags/[tagName]
+
+       # View the tag information.
+       $ git show [tag]
+
+       # Commit the specified tag.
+       $ git push [remote] [tag]
+
+       # Commit all tags.
+       $ git push [remote] --tags
+
+       # Create a new branch pointing to a certain tag
+       $ git checkout -b [branch] [tag]
 
 
 
