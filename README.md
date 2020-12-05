@@ -88,7 +88,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        # Undo the last commit.
        $ git reset HEAD~1
 
-8. ### Remote synchronization from Repository(Repository <-- Remote)
+8. ### Remote synchronization from Repository(Repository --> Remote)
 
        # Push the current branch to the Remote Repository.
        $ git push origin [branch]
@@ -167,7 +167,6 @@ Though there are 1000’s of articles about git, I have written this article is 
 
         # Delete the files in the Workspace and put this deletion into the Staging.
         $ git rm [file1] [file2] ...
-
 
         # Stop tracking the specified file, but the file will be remained in the Workspace.
         $ git rm --cached [file]
