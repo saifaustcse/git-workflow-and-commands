@@ -43,7 +43,7 @@
        5- $ git remote add origin github.com/saifaustcse/new_repository
        6- $ git push -u origin master
 
-4. ### Add/Delete Files
+5. ### Add/Delete Files
 
        # Add the specified file to the Index.
        $ git add [file1] [file2] ...
@@ -58,16 +58,8 @@
        $ git reset HEAD .
        $ git reset HEAD file
 
-5. ### Ignore files and folder 
 
-       # Delete the files in the Workspace and put this deletion into the Index.
-       $ git rm [file1] [file2] ...
-
-
-       # Stop tracking the specified file, but the file will be remained in the Workspace.
-       $ git rm --cached [file]
-
-5. ### Code Submission
+5. ### Code update local in branch
 
        # Submit the code from the Index to the Repository.
        $ git commit -m [message]
@@ -91,7 +83,37 @@
        # Redo the last commit, including the new changes to the specified file.
        $ git commit --amend [file1] [file2] ...
 
-6. ### Branching
+
+6. ### Local branch synchronization from remote
+
+       # Download all changes from the Remote Repository.
+       $ git fetch [remote]
+
+       # Display all the Remote Repositories.
+       $ git remote -v
+
+       # Display the information about a certain Remote Repository.
+       $ git remote show [remote]
+
+       # Retrieve the changes to the Remote Repository and merge with the local branch.
+       $ git pull [remote] [branch]
+
+       # Push the local specified branch to the Remote Repository.
+       $ git push [remote] [branch]
+
+       # Push all the branches to the Remote Repository.
+       $ git push [remote] --all
+
+6. ### Remote branch synchronization from local
+
+       # Push the local specified branch to the Remote Repository.
+       $ git push [remote] [branch]
+
+       # Push all the branches to the Remote Repository.
+       $ git push [remote] --all
+
+
+4. ### Branching
 
        # List all local branches. (the asterisk denotes the current branch)
        $ git branch
@@ -120,31 +142,6 @@
        # Delete the remote branch.
        $ git push origin --delete [branch-name]
        $ git branch -dr [remote/branch]
-
-6. ### Remote Synchronization
-
-       # Download all changes from the Remote Repository.
-       $ git fetch [remote]
-
-       # Display all the Remote Repositories.
-       $ git remote -v
-
-       # Display the information about a certain Remote Repository.
-       $ git remote show [remote]
-
-      
-
-       # Retrieve the changes to the Remote Repository and merge with the local branch.
-       $ git pull [remote] [branch]
-
-       # Push the local specified branch to the Remote Repository.
-       $ git push [remote] [branch]
-
-       # Force to push the current branch to the Remote Repository, even if there is a conflict
-       $ git push [remote] --force
-
-       # Push all the branches to the Remote Repository.
-       $ git push [remote] --all
        
 6. ### Merging
 
@@ -157,6 +154,16 @@
        # Select a commit to be merged into the current branch.
        $ git cherry-pick [commit]
 
+
+5. ### Ignore files and folder 
+
+       # Delete the files in the Workspace and put this deletion into the Index.
+       $ git rm [file1] [file2] ...
+
+
+       # Stop tracking the specified file, but the file will be remained in the Workspace.
+       $ git rm --cached [file]
+       
 6. ### Tag
 
        # List all tags.
