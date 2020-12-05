@@ -100,150 +100,150 @@
 
 10. ### Workspace synchronization from Repository (Workspace <-- Repository)
 
-       # merge the specified branch to the current branch.
-       $ git merge [branch]
+        # merge the specified branch to the current branch.
+        $ git merge [branch]
 
-       # merge a branch into a target branch
-       $ git merge [source branch] [target branch]
+        # merge a branch into a target branch
+        $ git merge [source branch] [target branch]
 
 11. ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
-       # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
-       $ git pull origin [branch]
+        # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
+        $ git pull origin [branch]
 
 12. ### View Information
 
-       # Display the changed files.
-       $ git status
+        # Display the changed files.
+        $ git status
 
-       # Display the version history of the current branch.
-       $ git log
+        # Display the version history of the current branch.
+        $ git log
 
-       # Display the commit history, and the changed files for each commit.
-       $ git log --stat
+        # Display the commit history, and the changed files for each commit.
+        $ git log --stat
 
-       # Search commit history, according the keyword.
-       $ git log -S [keyword]
+        # Search commit history, according the keyword.
+        $ git log -S [keyword]
 
-       # Display all changes since a certain commit, occupying one line for one commit.
-       $ git log [tag] HEAD --pretty=format:%s
+        # Display all changes since a certain commit, occupying one line for one commit.
+        $ git log [tag] HEAD --pretty=format:%s
 
-       # Display all changes since a certain commit, and its "commit description" must meet the search criteria.
-       $ git log [tag] HEAD --grep feature
+        # Display all changes since a certain commit, and its "commit description" must meet the search criteria.
+        $ git log [tag] HEAD --grep feature
 
-       # Display the version history of a certain file.
-       $ git log --follow [file]
-       $ git whatchanged [file]
+        # Display the version history of a certain file.
+        $ git log --follow [file]
+        $ git whatchanged [file]
 
-       # Display each diff related to the specified file.
-       $ git log -p [file]
+        # Display each diff related to the specified file.
+        $ git log -p [file]
 
-       # Display the past 5 commits.
-       $ git log -5 --pretty --oneline
+        # Display the past 5 commits.
+        $ git log -5 --pretty --oneline
 
-       # Display all the users who have committed, sorted by number of commits.
-       $ git shortlog -sn
+        # Display all the users who have committed, sorted by number of commits.
+        $ git shortlog -sn
 
-       # Display when and by whom the specified file was modified.
-       $ git blame [file]
+        # Display when and by whom the specified file was modified.
+        $ git blame [file]
 
-       # Display the difference between the Index and the Workspace.
-       $ git diff
+        # Display the difference between the Index and the Workspace.
+        $ git diff
 
-       # Display the difference between the Index and the previous commit.
-       $ git diff --cached [file]
+        # Display the difference between the Index and the previous commit.
+        $ git diff --cached [file]
 
-       # Display the difference between the Workspace and the latest commit of the current branch.
-       $ git diff HEAD
+        # Display the difference between the Workspace and the latest commit of the current branch.
+        $ git diff HEAD
 
-       # Display the difference between two commits.
-       $ git diff [first-branch]...[second-branch]
+        # Display the difference between two commits.
+        $ git diff [first-branch]...[second-branch]
 
-       # Display how many lines of code you have written today.
-       $ git diff --shortstat "@{0 day ago}"
+        # Display how many lines of code you have written today.
+        $ git diff --shortstat "@{0 day ago}"
 
-       # Show the metadata and the changed content for a certain commit.
-       $ git show [commit]
+        # Show the metadata and the changed content for a certain commit.
+        $ git show [commit]
 
-       # Show the changed file for a certain commit.
-       $ git show --name-only [commit]
+        # Show the changed file for a certain commit.
+        $ git show --name-only [commit]
 
-       # Show the contents of a certain file for a certain commit.
-       $ git show [commit]:[filename]
+        # Show the contents of a certain file for a certain commit.
+        $ git show [commit]:[filename]
 
-       # Show the latest commits of the current branch.
-       $ git reflog
+        # Show the latest commits of the current branch.
+        $ git reflog
 
 
 
 12. ### Branching
 
-       # List all local branches. (the asterisk denotes the current branch)
-       $ git branch
+        # List all local branches. (the asterisk denotes the current branch)
+        $ git branch
 
-       # List all remote branches.
-       $ git branch -r
+        # List all remote branches.
+        $ git branch -r
 
-       # List all local branches and remote branches.
-       $ git branch -a
+        # List all local branches and remote branches.
+        $ git branch -a
 
-       # Create a new branch, but still stay in the current branch.
-       $ git branch [branch-name]
+        # Create a new branch, but still stay in the current branch.
+        $ git branch [branch-name]
 
-       # Create a new branch and switch to the branch.
-       $ git checkout -b [branch]
+        # Create a new branch and switch to the branch.
+        $ git checkout -b [branch]
 
-       # Switch to the specified branch and update the workspace.
-       $ git checkout [branch-name]
+        # Switch to the specified branch and update the workspace.
+        $ git checkout [branch-name]
 
-       # Switch to the previous branch.
-       $ git checkout -
+        # Switch to the previous branch.
+        $ git checkout -
 
-       # Delete the branch.
-       $ git branch -d [branch-name]
-       
-       # Delete the remote branch.
-       $ git push origin --delete [branch-name]
-       $ git branch -dr [remote/branch]
+        # Delete the branch.
+        $ git branch -d [branch-name]
+
+        # Delete the remote branch.
+        $ git push origin --delete [branch-name]
+        $ git branch -dr [remote/branch]
 
 
 13. ### Ignore files and folder 
 
-       # Delete the files in the Workspace and put this deletion into the Index.
-       $ git rm [file1] [file2] ...
+        # Delete the files in the Workspace and put this deletion into the Index.
+        $ git rm [file1] [file2] ...
 
 
-       # Stop tracking the specified file, but the file will be remained in the Workspace.
-       $ git rm --cached [file]
+        # Stop tracking the specified file, but the file will be remained in the Workspace.
+        $ git rm --cached [file]
 
 14. ### Tag
 
-       # List all tags.
-       $ git tag
+        # List all tags.
+        $ git tag
 
-       # Create a new tag in the current commit.
-       $ git tag [tag]
+        # Create a new tag in the current commit.
+        $ git tag [tag]
 
-       # Create a new tag in the specified commit.
-       $ git tag [tag] [commit]
+        # Create a new tag in the specified commit.
+        $ git tag [tag] [commit]
 
-       # Delete the local tag.
-       $ git tag -d [tag]
+        # Delete the local tag.
+        $ git tag -d [tag]
 
-       # Delete the remote tag.
-       $ git push origin :refs/tags/[tagName]
+        # Delete the remote tag.
+        $ git push origin :refs/tags/[tagName]
 
-       # View the tag information.
-       $ git show [tag]
+        # View the tag information.
+        $ git show [tag]
 
-       # Commit the specified tag.
-       $ git push [remote] [tag]
+        # Commit the specified tag.
+        $ git push [remote] [tag]
 
-       # Commit all tags.
-       $ git push [remote] --tags
+        # Commit all tags.
+        $ git push [remote] --tags
 
-       # Create a new branch pointing to a certain tag
-       $ git checkout -b [branch] [tag]
+        # Create a new branch pointing to a certain tag
+        $ git checkout -b [branch] [tag]
 
 
 
