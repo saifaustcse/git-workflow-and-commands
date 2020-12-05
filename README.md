@@ -145,7 +145,7 @@ Though there are 1000’s of articles about git, I have written this article is 
         $ git push origin --delete [branch-name]
         $ git branch -dr [remote/branch]
 
-13. ### View Information
+13. ### Inspection
 
         # Display the changed files.
         $ git status
