@@ -45,15 +45,18 @@
        # Add all the files in the current directory to the Index.
        $ git add .
 
+       # If unwanted files were added to the staging area but not yet committed.
+       $ git reset HEAD .
+       $ git reset HEAD file
+
+5. ### Ignore files and folder 
+
        # Delete the files in the Workspace and put this deletion into the Index.
        $ git rm [file1] [file2] ...
 
+
        # Stop tracking the specified file, but the file will be remained in the Workspace.
        $ git rm --cached [file]
-
-       # Rename the file and put the renamed name into the Index.
-       $ git mv [file-original] [file-renamed]
-
 
 5. ### Code Submission
 
@@ -75,6 +78,8 @@
 
        # Redo the last commit, including the new changes to the specified file.
        $ git commit --amend [file1] [file2] ...
+
+       git reset HEAD~1
 
 6. ### Branching
 
