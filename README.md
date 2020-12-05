@@ -88,7 +88,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        # Undo the last commit.
        $ git reset HEAD~1
 
-8. ### Remote synchronization from Repository(Repository <-- Remotr)
+8. ### Remote synchronization from Repository(Repository <-- Remote)
 
        # Push the current branch to the Remote Repository.
        $ git push origin [branch]
@@ -101,6 +101,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 
        # Download all remote branches.
        $ git fetch --all
+
 
 10. ### Workspace synchronization from Repository (Workspace <-- Repository)
 
@@ -164,7 +165,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 13. ### Ignore files and folder 
 
-       # Delete the files in the Workspace and put this deletion into the Index.
+       # Delete the files in the Workspace and put this deletion into the Staging.
        $ git rm [file1] [file2] ...
 
 
@@ -203,28 +204,28 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 6. ### Revoke
 
-       # Restore the specified file of the Index to the Workspace.
+       # Restore the specified file of the Staging to the Workspace.
        $ git checkout [file]
 
-       # Restore the specified file of a certain commit to the Index and Workspace.
+       # Restore the specified file of a certain commit to the Staging and Workspace.
        $ git checkout [commit] [file]
 
-       # Restore all the files in the Index to the Workspace.
+       # Restore all the files in the Staging to the Workspace.
        $ git checkout .
 
-       # Reset the specified file in the Index, keeping consistent with the previous commit, but remaining the workspace unchanged.
+       # Reset the specified file in the Staging, keeping consistent with the previous commit, but remaining the workspace unchanged.
        $ git reset [file]
 
-       # Reset the Index and workspace, keeping consistent with the last commit.
+       # Reset the Staging and workspace, keeping consistent with the last commit.
        $ git reset --hard
 
-       # Reset the pointer of the current branch to pointing the specified commit while resetting the Index, but the workspace remains unchanged.
+       # Reset the pointer of the current branch to pointing the specified commit while resetting the Staging, but the workspace remains unchanged.
        $ git reset [commit]
 
-       # Reset the HEAD of the current branch to the specified commit while resetting the Index and Workspace, keeping consistent with the specified commit.
+       # Reset the HEAD of the current branch to the specified commit while resetting the Staging and Workspace, keeping consistent with the specified commit.
        $ git reset --hard [commit]
 
-       # Reset the current HEAD to the specified commit, remaining the Index and Workspace unchanged.
+       # Reset the current HEAD to the specified commit, remaining the Staging and Workspace unchanged.
        $ git reset --keep [commit]
 
        # Create a new commit to undo the specified commit.
