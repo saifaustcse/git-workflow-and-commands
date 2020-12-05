@@ -141,7 +141,7 @@
         $ git push origin --delete [branch-name]
         $ git branch -dr [remote/branch]
 
-12. ### View Information
+13. ### View Information
 
         # Display the changed files.
         $ git status
@@ -197,7 +197,6 @@
         $ git checkout -b [branch] [tag]
 
 
-
 6. ### Remote Synchronization
 
        # Restore the specified file of the Index to the Workspace.
@@ -245,7 +244,9 @@
 
     I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
  
+     * [The-official-Git-site] (https://git-scm.com/book/en/v2)
      * [git-most-frequently-used-commands](https://medium.com/analytics-vidhya/git-most-frequently-used-commands-9df9f200c235)
      * [atlassian](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
      * [ercankaracelik](https://ercankaracelik.wordpress.com/2018/12/08/basic-git-commands/)
      * [tutorialdocs](hhttps://www.tutorialdocs.com/article/git-basic-command-list.html)
+
