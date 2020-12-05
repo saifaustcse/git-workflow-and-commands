@@ -81,16 +81,15 @@
        # Display all diff information when submitting.
        $ git commit -v
 
+       # Redo the last commit.
+       $ git reset HEAD~1
+
        # Use a new commit to take the place of the last commit.
        # If the code doesn't have any new changes, it will be used to rewrite the commit information of the last commit.
        $ git commit --amend -m [message]
 
        # Redo the last commit, including the new changes to the specified file.
        $ git commit --amend [file1] [file2] ...
-
-       git reset HEAD~1
-       git reset HEAD~1
-
 
 6. ### Branching
 
