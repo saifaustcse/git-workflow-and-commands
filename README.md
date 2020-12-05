@@ -34,7 +34,7 @@
        # Download an existing git repository to your local computer with its entire code history.
        $ git clone [url]
 
-    Pocess 2: Create a Repository in local machine then push repository in git hub/git
+    Pocess 2: Create a Repository in local machine then add repository in git hub/git
 
        1- $ cd to your Project
        2- $ git init
@@ -121,6 +121,30 @@
        $ git push origin --delete [branch-name]
        $ git branch -dr [remote/branch]
 
+6. ### Remote Synchronization
+
+       # Download all changes from the Remote Repository.
+       $ git fetch [remote]
+
+       # Display all the Remote Repositories.
+       $ git remote -v
+
+       # Display the information about a certain Remote Repository.
+       $ git remote show [remote]
+
+      
+
+       # Retrieve the changes to the Remote Repository and merge with the local branch.
+       $ git pull [remote] [branch]
+
+       # Push the local specified branch to the Remote Repository.
+       $ git push [remote] [branch]
+
+       # Force to push the current branch to the Remote Repository, even if there is a conflict
+       $ git push [remote] --force
+
+       # Push all the branches to the Remote Repository.
+       $ git push [remote] --all
        
 6. ### Merging
 
@@ -226,31 +250,7 @@
        $ git reflog
 
 
-6. ### Remote Synchronization
 
-       # Download all changes from the Remote Repository.
-       $ git fetch [remote]
-
-       # Display all the Remote Repositories.
-       $ git remote -v
-
-       # Display the information about a certain Remote Repository.
-       $ git remote show [remote]
-
-       # Add a new Remote Repository and name it.
-       $ git remote add [shortname] [url]
-
-       # Retrieve the changes to the Remote Repository and merge with the local branch.
-       $ git pull [remote] [branch]
-
-       # Push the local specified branch to the Remote Repository.
-       $ git push [remote] [branch]
-
-       # Force to push the current branch to the Remote Repository, even if there is a conflict
-       $ git push [remote] --force
-
-       # Push all the branches to the Remote Repository.
-       $ git push [remote] --all
 
 6. ### Remote Synchronization
 

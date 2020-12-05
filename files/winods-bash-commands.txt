@@ -1,0 +1,13 @@
+﻿#. check directory
+  
+   ls
+ 
+#. Move to previous directory
+  
+   ..
+
+#. Move to next directory
+  
+   ./
+
+
