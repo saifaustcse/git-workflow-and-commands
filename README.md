@@ -43,7 +43,7 @@
        5- $ git remote add origin github.com/saifaustcse/new_repository
        6- $ git push -u origin master
 
-4. ### Files and folder and changes manage (Workspace -- > Staging)
+4. ### Adding files and folder (Workspace --> Staging)
 
        # Add the specified file from the current directory to the staging.
        $ git add [file1] [file2] ...
@@ -56,53 +56,52 @@
 
        # If unwanted files were added to the staging area but not yet committed.
        $ git reset HEAD .
-       $ git reset HEAD file
+       $ git reset HEAD [file_name]
 
 
-5. ### Files and folder and changes manage (Staging --> Repository)
+5. ### Commit changes (Staging --> Repository)
 
        # Submit the code from the staging to the Repository with a message
        $ git commit -m [message]
       
        # Submit the specified file from the staging to the Repository.
-       $ git commit [file1] [file2] ... -m [message]
+       $ git commit [file1] [file2] [fileN] -m [message]
 
        # Display all diff information when submitting.
        $ git commit -v
 
-6. ### Files and folder and changes manage (Workspace --> Repository)
+6. ### Commit changes (Workspace --> Staging --> Repository)
 
-       # Submit the changes after the last commit of all tracked files from the Workspace to the Repository directly.
-       $ git commit -am ‘commit message’
+       # Submit the changes of all tracked files after the last commit.
+       $ git commit -am [message]
 
-       # For untracked files
+       # For untracked file
        $ git add .
-       $ git commit -am ‘commit message’
+       $ git commit -am [message]
 
-7. ### Files and folder and changes manage (Repository --> Workspace)
+7. ### Commit changes (Workspace <-- Staging <-- Repository )
 
        # Redo the last commit.
        $ git reset HEAD~1
 
-6. ### Local branch synchronization from remote
+8. ### Repository synchronization from remote (Repository <-- Remote)
 
-       # Download all changes from the Remote Repository.
-       $ git fetch [remote]
+       # Download specific branch.
+       $ git fetch origin [branch]
 
-       # Display all the Remote Repositories.
-       $ git remote -v
+       # Download all remote branches.
+       $ git fetch --all
 
-       # Display the information about a certain Remote Repository.
-       $ git remote show [remote]
+8. ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
        # Retrieve the changes to the Remote Repository and merge with the local branch.
-       $ git pull [remote] [branch]
+       $ git pull origin [branch]
 
        # Push the local specified branch to the Remote Repository.
-       $ git push [remote] [branch]
+       $ git push origin [branch]
 
        # Push all the branches to the Remote Repository.
-       $ git push [remote] --all
+       $ git push origin --all
 
 6. ### Remote branch synchronization from local
 
