@@ -86,8 +86,8 @@
 
 8. ### Remote synchronization from Repository(Repository <-- Remotr)
 
-       # Undo the last commit.
-       $ git reset HEAD~1
+       # Push the current branch to the Remote Repository.
+       $ git push origin [branch]
 
 
 8. ### Repository synchronization from remote (Repository <-- Remote)
@@ -113,11 +113,7 @@
        # Retrieve the changes to the Remote Repository and merge with the local branch.
        $ git pull origin [branch]
 
-       # Push the local specified branch to the Remote Repository.
-       $ git push origin [branch]
-
-       # Push all the branches to the Remote Repository.
-       $ git push origin --all
+     
 
 
 6. ### Remote branch synchronization from local
