@@ -1,4 +1,8 @@
-# Find me
+# Basic Git Workflow and Commands
+
+Though there are 1000’s of articles about git, I have written this article is in order to document what I understood and how I understood which may help others as well.
+
+# Find me if you wish
 
 > If you think that these can be improved in anyway, please do suggest. Pull Request are highly appreciated. Find me if you wish [@Saif(https://www.linkedin.com/in/saif-aust-cse/).
 
@@ -100,101 +104,101 @@
 
 10. ### Workspace synchronization from Repository (Workspace <-- Repository)
 
-        # merge the specified branch to the current branch.
-        $ git merge [branch]
+       # merge the specified branch to the current branch.
+       $ git merge [branch]
 
-        # merge a branch into a target branch
-        $ git merge [source branch] [target branch]
+       # merge a branch into a target branch
+       $ git merge [source branch] [target branch]
 
 11. ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
-        # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
-        $ git pull origin [branch]
+       # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
+       $ git pull origin [branch]
 
 12. ### Branching
 
-        # List all local branches. (the asterisk denotes the current branch)
-        $ git branch
+       # List all local branches. (the asterisk denotes the current branch)
+       $ git branch
 
-        # List all remote branches.
-        $ git branch -r
+       # List all remote branches.
+       $ git branch -r
 
-        # List all local branches and remote branches.
-        $ git branch -a
+       # List all local branches and remote branches.
+       $ git branch -a
 
-        # Create a new branch, but still stay in the current branch.
-        $ git branch [branch-name]
+       # Create a new branch, but still stay in the current branch.
+       $ git branch [branch-name]
 
-        # Create a new branch and switch to the branch.
-        $ git checkout -b [branch]
+       # Create a new branch and switch to the branch.
+       $ git checkout -b [branch]
 
-        # Switch to the specified branch and update the workspace.
-        $ git checkout [branch-name]
+       # Switch to the specified branch and update the workspace.
+       $ git checkout [branch-name]
 
-        # Switch to the previous branch.
-        $ git checkout -
+       # Switch to the previous branch.
+       $ git checkout -
 
-        # Delete the branch.
-        $ git branch -d [branch-name]
+       # Delete the branch.
+       $ git branch -d [branch-name]
 
-        # Delete the remote branch.
-        $ git push origin --delete [branch-name]
-        $ git branch -dr [remote/branch]
+       # Delete the remote branch.
+       $ git push origin --delete [branch-name]
+       $ git branch -dr [remote/branch]
 
 13. ### View Information
 
-        # Display the changed files.
-        $ git status
+       # Display the changed files.
+       $ git status
 
-        # Display the version history of the current branch.
-        $ git log
+       # Display the version history of the current branch.
+       $ git log
 
-        # Display the past 5 commits.
-        $ git log -5 --pretty --oneline
+       # Display the past 5 commits.
+       $ git log -5 --pretty --oneline
 
-        # Display all the users who have committed, sorted by number of commits.
-        $ git shortlog -sn
+       # Display all the users who have committed, sorted by number of commits.
+       $ git shortlog -sn
 
-        # Show the latest commits of the current branch.
-        $ git reflog
+       # Show the latest commits of the current branch.
+       $ git reflog
 
 13. ### Ignore files and folder 
 
-        # Delete the files in the Workspace and put this deletion into the Index.
-        $ git rm [file1] [file2] ...
+       # Delete the files in the Workspace and put this deletion into the Index.
+       $ git rm [file1] [file2] ...
 
 
-        # Stop tracking the specified file, but the file will be remained in the Workspace.
-        $ git rm --cached [file]
+       # Stop tracking the specified file, but the file will be remained in the Workspace.
+       $ git rm --cached [file]
 
 14. ### Tag
 
-        # List all tags.
-        $ git tag
+       # List all tags.
+       $ git tag
 
-        # Create a new tag in the current commit.
-        $ git tag [tag]
+       # Create a new tag in the current commit.
+       $ git tag [tag]
 
-        # Create a new tag in the specified commit.
-        $ git tag [tag] [commit]
+       # Create a new tag in the specified commit.
+       $ git tag [tag] [commit]
 
-        # Delete the local tag.
-        $ git tag -d [tag]
+       # Delete the local tag.
+       $ git tag -d [tag]
 
-        # Delete the remote tag.
-        $ git push origin :refs/tags/[tagName]
+       # Delete the remote tag.
+       $ git push origin :refs/tags/[tagName]
 
-        # View the tag information.
-        $ git show [tag]
+       # View the tag information.
+       $ git show [tag]
 
-        # Commit the specified tag.
-        $ git push [remote] [tag]
+       # Commit the specified tag.
+       $ git push [remote] [tag]
 
-        # Commit all tags.
-        $ git push [remote] --tags
+       # Commit all tags.
+       $ git push [remote] --tags
 
-        # Create a new branch pointing to a certain tag
-        $ git checkout -b [branch] [tag]
+       # Create a new branch pointing to a certain tag
+       $ git checkout -b [branch] [tag]
 
 
 6. ### Revoke
@@ -234,11 +238,11 @@
 
 6. ### Others
 
+       # Select a commit to be merged into the current branch.
+       $ git cherry-pick [commit]
+
        # Generate a archive for releasing.
        $ git archive
-
-             # Select a commit to be merged into the current branch.
-       $ git cherry-pick [commit]
 
 9. ### References
 
