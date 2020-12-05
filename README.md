@@ -103,7 +103,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        $ git fetch --all
 
 
-10.### Workspace synchronization from Repository (Workspace <-- Repository)
+10. ### Workspace synchronization from Repository (Workspace <-- Repository)
 
        # merge the specified branch to the current branch.
        $ git merge [branch]
@@ -111,12 +111,12 @@ Though there are 1000’s of articles about git, I have written this article is 
        # merge a branch into a target branch
        $ git merge [source branch] [target branch]
 
-11.### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
+11. ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
        # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
        $ git pull origin [branch]
 
-12.### Branching
+12. ### Branching
 
        # List all local branches. (the asterisk denotes the current branch)
        $ git branch
@@ -146,7 +146,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        $ git push origin --delete [branch-name]
        $ git branch -dr [remote/branch]
 
-13.### View Information
+13. ### View Information
 
        # Display the changed files.
        $ git status
@@ -163,7 +163,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        # Show the latest commits of the current branch.
        $ git reflog
 
-13.### Ignore files and folder 
+14. ### Ignore files and folder 
 
        # Delete the files in the Workspace and put this deletion into the Staging.
        $ git rm [file1] [file2] ...
@@ -172,7 +172,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        # Stop tracking the specified file, but the file will be remained in the Workspace.
        $ git rm --cached [file]
 
-14.### Tag
+15. ### Tag
 
        # List all tags.
        $ git tag
@@ -202,7 +202,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        $ git checkout -b [branch] [tag]
 
 
-6. ### Revoke
+16. ### Revoke
 
        # Restore the specified file of the Staging to the Workspace.
        $ git checkout [file]
@@ -237,7 +237,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        $ git stash pop
 
 
-6. ### Others
+17. ### Others
 
        # Select a commit to be merged into the current branch.
        $ git cherry-pick [commit]
@@ -245,7 +245,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        # Generate a archive for releasing.
        $ git archive
 
-9. ### References
+18. ### References
 
     I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
  
@@ -253,5 +253,5 @@ Though there are 1000’s of articles about git, I have written this article is 
      * [Atlassian](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
      * [Git-most-frequently-used-commands](https://medium.com/analytics-vidhya/git-most-frequently-used-commands-9df9f200c235)
      * [Ercankaracelik](https://ercankaracelik.wordpress.com/2018/12/08/basic-git-commands/)
-     * [tutorialdocs](hhttps://www.tutorialdocs.com/article/git-basic-command-list.html)
+     * [Tutorialdocs](hhttps://www.tutorialdocs.com/article/git-basic-command-list.html)
 
