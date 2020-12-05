@@ -43,7 +43,7 @@
        5- $ git remote add origin github.com/saifaustcse/new_repository
        6- $ git push -u origin master
 
-5. ### Workspace -- > Staging
+4. ### Files and folder and changes manage (Workspace -- > Staging)
 
        # Add the specified file from the current directory to the staging.
        $ git add [file1] [file2] ...
@@ -59,7 +59,7 @@
        $ git reset HEAD file
 
 
-5. ### Staging --> Repository
+5. ### Files and folder and changes manage (Staging --> Repository)
 
        # Submit the code from the staging to the Repository with a message
        $ git commit -m [message]
@@ -70,10 +70,7 @@
        # Display all diff information when submitting.
        $ git commit -v
 
-       # Redo the last commit.
-       $ git reset HEAD~1
-
-5. ### Workspace --> Repository
+6. ### Files and folder and changes manage (Workspace --> Repository)
 
        # Submit the changes after the last commit of all tracked files from the Workspace to the Repository directly.
        $ git commit -am ‘commit message’
@@ -82,9 +79,10 @@
        $ git add .
        $ git commit -am ‘commit message’
 
+7. ### Files and folder and changes manage (Repository --> Workspace)
+
        # Redo the last commit.
        $ git reset HEAD~1
-
 
 6. ### Local branch synchronization from remote
 
