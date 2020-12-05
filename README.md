@@ -98,7 +98,6 @@
        # Download all remote branches.
        $ git fetch --all
 
-
 10. ### Workspace synchronization from Repository (Workspace <-- Repository)
 
        # merge the specified branch to the current branch.
@@ -111,7 +110,6 @@
 
        # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
        $ git pull origin [branch]
-
 
 12. ### View Information
 
