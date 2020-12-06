@@ -174,14 +174,13 @@ Though there are 1000’s of articles about git, I have written this article is 
    * [Thegeekstuff](https://www.thegeekstuff.com/2014/04/git-log/)
 
 
-### Revoke/Undo from Workspace
+### Discard changes from Workspace
 
     # Restore the specified file of the Workspace.
     $ git checkout [file]
 
     # Restore all the files of the Workspace.
     $ git checkout .
-
     
 ### Undo Commit (Workspace <-- Staging <-- Repository )
 
@@ -190,7 +189,12 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 ### Revoke/Undo from Staging (Workspace <-- Staging)
 
-    # Reset the specified file in the Staging, keeping consistent with the previous commit, but remaining the workspace unchanged.
+    # Restore all files from the Staging to the Workspace.
+    # Remaining the workspace unchanged.
+    $ git reset
+
+    # Restore specified file from the Staging to the Workspace.
+    # Remaining the workspace unchanged.
     $ git reset [file]
 
     # Reset the Staging and workspace, keeping consistent with the last commit.
