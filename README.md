@@ -176,16 +176,16 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 ### Discard changes from Workspace
 
-    # Restore the specified file of the Workspace.
+    # Discard changes from the specified file of the Workspace.
     $ git checkout [file]
 
-    # Restore all the files of the Workspace.
+    # Discard all changes of the Workspace.
     $ git checkout .
 
 ### Revoke/Undo from Staging (Workspace <-- Staging)
 
     # Restore specified file from the Staging to the Workspace.
-    # Remaining the workspace unchanged.
+    # Changes will stay in workspace. 
     $ git reset [file]
 
     # Restore all files from the Staging to the Workspace.
@@ -193,25 +193,25 @@ Though there are 1000’s of articles about git, I have written this article is 
     $ git reset
 
     # Restore all files from the Staging to the Workspace.
-    # All chnages of the workspace will be discard.
+    # All chnages will be discard.
     $ git reset --hard
 
 ### Revoke/Undo from Repository (Workspace <-- Staging <-- Repository)
 
     # Restore all files from the Repository to the Workspace.
-    # Remaining the workspace unchanged.
+    # All changes will stay on Workspace.
     # Undo the last commit.
     $ git reset HEAD~1
-    $ git reset --mixed  HEAD~1
+    $ git reset --mixed HEAD~1
 
     # Restore all files from the Repository to the Staging.
-    # Remaining the workspace unchanged.
+    # All changes will stay on Staging.
     # Undo the last commit.
     $ git reset --soft HEAD~1
 
     # Restore all files from the Repository to the Workspace.
+    # All chnages will be discard.
     # Undo the last commit.
-    # All chnages of the workspace will be discard.
     $ git reset --hard HEAD~1
  
 ### Revoke/Undo from Rmote (Workspace <-- Staging <-- Repository)
@@ -219,6 +219,7 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Create a new commit to undo the specified commit.
     # All changes of the latter will be offset by the former and applied to the current branch.
     $ git revert [commit]
+
 
 ### Stash
 
@@ -274,15 +275,18 @@ Though there are 1000’s of articles about git, I have written this article is 
       # Generate a archive for releasing.
       $ git archive
 
+
+### Checkout vs Reset vs Revert
+
+  * [Atlassian](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
+
 ### Merging vs. Rebasing
 
  * [Atlassian](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
-### Resetting, Checking Out & Reverting
-
-  * [Atlassian](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
 # References
+
 
    I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
  
