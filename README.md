@@ -14,6 +14,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 
 ## Commands
+
 ### Configuration
    
    git config that lets you get and set configuration variables that control all aspects of how Git looks and operates.
@@ -28,6 +29,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        # Check
        git config --global user.name
        git config --global user.email
+       
 
 ### Manage Repository
 
@@ -46,6 +48,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        4- $ git commit -m "first commit"
        5- $ git remote add origin github.com/saifaustcse/new_repository
        6- $ git push -u origin master
+       
 
 ### Adding files and folder (Workspace --> Staging)
 
@@ -73,6 +76,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 
        # Display all diff information when submitting.
        $ git commit -v
+       
 
 ### Commit changes (Workspace --> Staging --> Repository)
 
@@ -82,6 +86,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        # For untracked file
        $ git add .
        $ git commit -am [message]
+       
 
 ### Undo Commit (Workspace <-- Staging <-- Repository )
 
@@ -110,11 +115,13 @@ Though there are 1000’s of articles about git, I have written this article is 
 
         # merge a branch into a target branch
         $ git merge [source branch] [target branch]
+        
 
 ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
         # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
         $ git pull origin [branch]
+        
 
 ### Branching
 
@@ -145,6 +152,7 @@ Though there are 1000’s of articles about git, I have written this article is 
         # Delete the remote branch.
         $ git push origin --delete [branch-name]
         $ git branch -dr [remote/branch]
+        
 
 ### Inspection
 
@@ -162,6 +170,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 
         # Show the latest commits of the current branch.
         $ git reflog
+        
 
 ### Ignore files and folder 
 
@@ -170,6 +179,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 
         # Stop tracking the specified file, but the file will be remained in the Workspace.
         $ git rm --cached [file]
+        
 
 ### Tag
 
@@ -243,6 +253,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 
         # Generate a archive for releasing.
         $ git archive
+        
 
 # References
 
