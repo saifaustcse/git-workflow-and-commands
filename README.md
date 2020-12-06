@@ -9,9 +9,8 @@ Though there are 1000’s of articles about git, I have written this article is 
 ## Workflow
  
     <div  style="text-align: center;">
-          <img src="https://github.com/saifaustcse/Git-workflow-and-commands/blob/main/images/workflow.png?raw=true" width="750" height="450">
+        <img src="https://github.com/saifaustcse/Git-workflow-and-commands/blob/main/images/workflow.png" width="500" height="300">
     <div>
-
 
 ## Commands
 
