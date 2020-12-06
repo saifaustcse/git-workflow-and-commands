@@ -183,9 +183,9 @@ Though there are 1000’s of articles about git, I have written this article is 
 
   For more details:
 
-        * [The-official-Git-site](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
-        * [Atlassian](https://www.atlassian.com/git/tutorials/git-log)
-        * [Thegeekstuff](https://www.thegeekstuff.com/2014/04/git-log/)
+   * [The-official-Git-site](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
+   * [Atlassian](https://www.atlassian.com/git/tutorials/git-log)
+   * [Thegeekstuff](https://www.thegeekstuff.com/2014/04/git-log/)
 
  
 
@@ -222,6 +222,7 @@ Though there are 1000’s of articles about git, I have written this article is 
         # Remove the uncommitted changes temporarily and move them in later.
         $ git stash
         $ git stash pop
+        
 
 ### Ignore files and folder 
 
@@ -271,21 +272,21 @@ Though there are 1000’s of articles about git, I have written this article is 
         # Generate a archive for releasing.
         $ git archive
 
-# Merging vs. Rebasing
+### Merging vs. Rebasing
 
  * [Atlassian](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
-# Resetting, Checking Out & Reverting
+### Resetting, Checking Out & Reverting
 
   * [Atlassian](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
 # References
 
-    I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
+   I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
  
-     * [The-official-Git-site](https://git-scm.com/book/en/v2)
-     * [Atlassian](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
-     * [Git-most-frequently-used-commands](https://medium.com/analytics-vidhya/git-most-frequently-used-commands-9df9f200c235)
-     * [Ercankaracelik](https://ercankaracelik.wordpress.com/2018/12/08/basic-git-commands/)
-     * [Tutorialdocs](https://www.tutorialdocs.com/article/git-basic-command-list.html)
+   * [The-official-Git-site](https://git-scm.com/book/en/v2)
+   * [Atlassian](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+   * [Git-most-frequently-used-commands](https://medium.com/analytics-vidhya/git-most-frequently-used-commands-9df9f200c235)
+   * [Ercankaracelik](https://ercankaracelik.wordpress.com/2018/12/08/basic-git-commands/)
+   * [Tutorialdocs](https://www.tutorialdocs.com/article/git-basic-command-list.html)
 
