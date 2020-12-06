@@ -50,13 +50,23 @@ Though there are 1000’s of articles about git, I have written this article is 
 ### Adding files and folder (Workspace --> Staging)
 
     # Add the specified file from the current directory to the staging.
+    # Start tracking an untracked file
     $ git add [file1] [file2] [fileN]
 
     # Add the specified directory from the current directory to the staging, including subdirectories.
+    # Start tracking an untracked directory
     $ git add [dir]
 
     # Add all files (tracked or untracked) from the current directory to the staging.
+    # Start tracking a untracked file
+    # Update the changes of tracked file from the current directory to the staging.
     $ git add .
+
+### Removing files and folder from stagging
+        
+    # Removes files from your index and your working directory 
+    # Start untracking a previously tracked file
+    $ git rm filename
 
 ### Commit changes (Staging --> Repository)
 
