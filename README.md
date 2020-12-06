@@ -58,10 +58,6 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Add all files (tracked or untracked) from the current directory to the staging.
     $ git add .
 
-    # If unwanted files were added to the staging area but not yet committed.
-    $ git reset HEAD .
-    $ git reset HEAD [file_name]
-
 ### Commit changes (Staging --> Repository)
 
     # Submit the code from the staging to the Repository with a message
@@ -184,13 +180,15 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 ### Revoke/Undo from Staging (Workspace <-- Staging)
 
+    # If unwanted file were added to the staging area but not yet committed.
     # Restore specified file from the Staging to the Workspace.
     # Changes will stay in workspace. 
     $ git reset [file]
 
     # Restore all files from the Staging to the Workspace.
-    # Remaining the workspace unchanged.
+    # Changes will stay in workspace. 
     $ git reset
+    $ git reset HEAD .
 
     # Restore all files from the Staging to the Workspace.
     # All chnages will be discard.
@@ -214,7 +212,7 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Undo the last commit.
     $ git reset --hard HEAD~1
  
-### Revoke/Undo from Rmote (Workspace <-- Staging <-- Repository)
+### Revoke/Undo from Remote (Workspace <-- Staging <-- Repository)
 
     # Create a new commit to undo the specified commit.
     # All changes of the latter will be offset by the former and applied to the current branch.
@@ -279,6 +277,8 @@ Though there are 1000’s of articles about git, I have written this article is 
 ### Checkout vs Reset vs Revert
 
   * [Atlassian](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
+  * [Medium](https://medium.com/@manivel45/git-merge-vs-rebase-reset-vs-revert-vs-checkout-dd5674d0e18a)
+  * [opensource](https://opensource.com/article/18/6/git-reset-revert-rebase-commands)
 
 ### Merging vs. Rebasing
 
@@ -286,7 +286,6 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 
 # References
-
 
    I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
  
