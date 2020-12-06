@@ -47,7 +47,6 @@ Though there are 1000’s of articles about git, I have written this article is 
     5- $ git remote add origin github.com/saifaustcse/new_repository
     6- $ git push -u origin master
        
-
 ### Adding files and folder (Workspace --> Staging)
 
     # Add the specified file from the current directory to the staging.
@@ -63,7 +62,6 @@ Though there are 1000’s of articles about git, I have written this article is 
     $ git reset HEAD .
     $ git reset HEAD [file_name]
 
-
 ### Commit changes (Staging --> Repository)
 
     # Submit the code from the staging to the Repository with a message
@@ -75,7 +73,6 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Display all diff information when submitting.
     $ git commit -v
 
-
 ### Commit changes (Workspace --> Staging --> Repository)
 
     # Submit the changes of all tracked files after the last commit.
@@ -84,18 +81,11 @@ Though there are 1000’s of articles about git, I have written this article is 
     # For untracked file
     $ git add .
     $ git commit -am [message]
-       
-
-### Undo Commit (Workspace <-- Staging <-- Repository )
-
-    # Undo the last commit.
-    $ git reset HEAD~1
 
 ### Remote synchronization from Repository(Repository --> Remote)
 
     # Push the current branch to the Remote Repository.
     $ git push origin [branch]
-
 
 ### Repository synchronization from remote (Repository <-- Remote)
 
@@ -105,7 +95,6 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Download all remote branches.
     $ git fetch --all
 
-
 ### Workspace synchronization from Repository (Workspace <-- Repository)
 
     # merge the specified branch to the current branch.
@@ -114,12 +103,10 @@ Though there are 1000’s of articles about git, I have written this article is 
     # merge a branch into a target branch
     $ git merge [source branch] [target branch]
         
-
 ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
     # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
     $ git pull origin [branch]
-
 
 ### Branching
 
@@ -151,7 +138,6 @@ Though there are 1000’s of articles about git, I have written this article is 
     $ git push origin --delete [branch-name]
     $ git branch -dr [remote/branch]
         
-
 ### Inspection
 
     # Display the changed files.
@@ -187,18 +173,22 @@ Though there are 1000’s of articles about git, I have written this article is 
    * [Atlassian](https://www.atlassian.com/git/tutorials/git-log)
    * [Thegeekstuff](https://www.thegeekstuff.com/2014/04/git-log/)
 
- 
 
-### Revoke
+### Revoke/Undo from Workspace
 
-    # Restore the specified file of the Staging to the Workspace.
+    # Restore the specified file of the Workspace.
     $ git checkout [file]
 
-    # Restore the specified file of a certain commit to the Staging and Workspace.
-    $ git checkout [commit] [file]
-
-    # Restore all the files in the Staging to the Workspace.
+    # Restore all the files of the Workspace.
     $ git checkout .
+
+    
+### Undo Commit (Workspace <-- Staging <-- Repository )
+
+    # Undo the last commit.
+    $ git reset HEAD~1
+
+### Revoke/Undo from Staging (Workspace <-- Staging)
 
     # Reset the specified file in the Staging, keeping consistent with the previous commit, but remaining the workspace unchanged.
     $ git reset [file]
@@ -221,8 +211,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 
     # Remove the uncommitted changes temporarily and move them in later.
     $ git stash
-    $ git stash pop
-        
+    $ git stash pop 
 
 ### Ignore files and folder 
 
