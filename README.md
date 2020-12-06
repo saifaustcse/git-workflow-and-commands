@@ -202,7 +202,7 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Remaining the workspace unchanged.
     # Undo the last commit.
     $ git reset HEAD~1
-    $ git reset --medium HEAD~1
+    $ git reset --mixed  HEAD~1
 
     # Restore all files from the Repository to the Staging.
     # Remaining the workspace unchanged.
