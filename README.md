@@ -184,15 +184,16 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 ### Revoke/Undo from Staging (Workspace <-- Staging)
 
-    # Restore all files from the Staging to the Workspace.
-    # Remaining the workspace unchanged.
-    $ git reset
-
     # Restore specified file from the Staging to the Workspace.
     # Remaining the workspace unchanged.
     $ git reset [file]
 
-    # Reset the Staging and workspace, keeping consistent with the last commit.
+    # Restore all files from the Staging to the Workspace.
+    # Remaining the workspace unchanged.
+    $ git reset
+
+    # Restore all files from the Staging to the Workspace.
+    # All chnages pf the workspace will be discard.
     $ git reset --hard
 
     # Reset the pointer of the current branch to pointing the specified commit while resetting the Staging, but the workspace remains unchanged.
