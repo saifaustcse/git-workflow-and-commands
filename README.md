@@ -196,7 +196,7 @@ Though there are 1000’s of articles about git, I have written this article is 
     # All chnages of the workspace will be discard.
     $ git reset --hard
 
-### Revoke/Undo from Staging (Workspace <-- Staging <-- Repository)
+### Revoke/Undo from Repository (Workspace <-- Staging <-- Repository)
 
     # Restore all files from the Repository to the Workspace.
     # Remaining the workspace unchanged.
@@ -213,14 +213,18 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Undo the last commit.
     # All chnages of the workspace will be discard.
     $ git reset --hard HEAD~1
+ 
+### Revoke/Undo from Rmote (Workspace <-- Staging <-- Repository)
 
     # Create a new commit to undo the specified commit.
     # All changes of the latter will be offset by the former and applied to the current branch.
     $ git revert [commit]
 
+### Stash
+
     # Remove the uncommitted changes temporarily and move them in later.
     $ git stash
-    $ git stash pop 
+    $ git stash pop
 
 ### Ignore files and folder 
 
