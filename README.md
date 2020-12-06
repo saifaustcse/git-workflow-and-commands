@@ -6,14 +6,15 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 > If you think that these can be improved in anyway, please do suggest. Pull Request are highly appreciated. Find me if you wish [@Saif(https://www.linkedin.com/in/saif-aust-cse/).
 
-1. ### Workflow
+## Workflow
  
     <div  style="text-align: center;">
-          <img src="https://github.com/saifaustcse/Basic-git-commands/blob/main/images/workflow.png" width="750" height="450">
+          <img src="https://github.com/saifaustcse/Git-workflow-and-commands/blob/main/images/workflow.png" width="750" height="450">
     <div>
 
 
-2. ### Configuration
+## Commands
+### Configuration
    
    git config that lets you get and set configuration variables that control all aspects of how Git looks and operates.
 
@@ -28,7 +29,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        git config --global user.name
        git config --global user.email
 
-3. ### Manage Repository
+### Manage Repository
 
     Pocess 1: Create a Repository in git hub/git lab then Clone the Repository
 
@@ -46,7 +47,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        5- $ git remote add origin github.com/saifaustcse/new_repository
        6- $ git push -u origin master
 
-4. ### Adding files and folder (Workspace --> Staging)
+### Adding files and folder (Workspace --> Staging)
 
        # Add the specified file from the current directory to the staging.
        $ git add [file1] [file2] [fileN]
@@ -62,7 +63,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        $ git reset HEAD [file_name]
 
 
-5. ### Commit changes (Staging --> Repository)
+### Commit changes (Staging --> Repository)
 
        # Submit the code from the staging to the Repository with a message
        $ git commit -m [message]
@@ -73,7 +74,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        # Display all diff information when submitting.
        $ git commit -v
 
-6. ### Commit changes (Workspace --> Staging --> Repository)
+### Commit changes (Workspace --> Staging --> Repository)
 
        # Submit the changes of all tracked files after the last commit.
        $ git commit -am [message]
@@ -82,18 +83,18 @@ Though there are 1000’s of articles about git, I have written this article is 
        $ git add .
        $ git commit -am [message]
 
-7. ### Undo Commit (Workspace <-- Staging <-- Repository )
+### Undo Commit (Workspace <-- Staging <-- Repository )
 
        # Undo the last commit.
        $ git reset HEAD~1
 
-8. ### Remote synchronization from Repository(Repository --> Remote)
+### Remote synchronization from Repository(Repository --> Remote)
 
        # Push the current branch to the Remote Repository.
        $ git push origin [branch]
 
 
-9. ### Repository synchronization from remote (Repository <-- Remote)
+### Repository synchronization from remote (Repository <-- Remote)
 
        # Download specific branch.
        $ git fetch origin [branch]
@@ -102,7 +103,7 @@ Though there are 1000’s of articles about git, I have written this article is 
        $ git fetch --all
 
 
-10. ### Workspace synchronization from Repository (Workspace <-- Repository)
+### Workspace synchronization from Repository (Workspace <-- Repository)
 
         # merge the specified branch to the current branch.
         $ git merge [branch]
@@ -110,12 +111,12 @@ Though there are 1000’s of articles about git, I have written this article is 
         # merge a branch into a target branch
         $ git merge [source branch] [target branch]
 
-11. ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
+### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
         # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
         $ git pull origin [branch]
 
-12. ### Branching
+### Branching
 
         # List all local branches. (the asterisk denotes the current branch)
         $ git branch
@@ -145,7 +146,7 @@ Though there are 1000’s of articles about git, I have written this article is 
         $ git push origin --delete [branch-name]
         $ git branch -dr [remote/branch]
 
-13. ### Inspection
+### Inspection
 
         # Display the changed files.
         $ git status
@@ -162,7 +163,7 @@ Though there are 1000’s of articles about git, I have written this article is 
         # Show the latest commits of the current branch.
         $ git reflog
 
-14. ### Ignore files and folder 
+### Ignore files and folder 
 
         # Delete the files in the Workspace and put this deletion into the Staging.
         $ git rm [file1] [file2] ...
@@ -170,7 +171,7 @@ Though there are 1000’s of articles about git, I have written this article is 
         # Stop tracking the specified file, but the file will be remained in the Workspace.
         $ git rm --cached [file]
 
-15. ### Tag
+### Tag
 
         # List all tags.
         $ git tag
@@ -200,7 +201,7 @@ Though there are 1000’s of articles about git, I have written this article is 
         $ git checkout -b [branch] [tag]
 
 
-16. ### Revoke
+### Revoke
 
         # Restore the specified file of the Staging to the Workspace.
         $ git checkout [file]
@@ -235,7 +236,7 @@ Though there are 1000’s of articles about git, I have written this article is 
         $ git stash pop
 
 
-17. ### Others
+### Others
 
         # Select a commit to be merged into the current branch.
         $ git cherry-pick [commit]
@@ -243,7 +244,7 @@ Though there are 1000’s of articles about git, I have written this article is 
         # Generate a archive for releasing.
         $ git archive
 
-18. ### References
+# References
 
     I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
  
