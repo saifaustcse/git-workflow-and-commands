@@ -16,7 +16,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 ### Configuration
    
-   git config that lets you get and set configuration variables that control all aspects of how Git looks and operates.
+   Git config that lets you get and set configuration variables that control all aspects of how Git looks and operates.
 
        # Display the current Git configuration.
        $ git config --list
@@ -33,8 +33,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 ### Manage Repository
 
     Pocess 1: Create a Repository in git hub/git lab then Clone the Repository
-
-      * [How to create git hub repository.](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
+   * [How to create git hub repository.](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
 
        # Download an existing git repository to your local computer with its entire code history.
        $ git clone [url]
@@ -274,11 +273,11 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 # Merging vs. Rebasing
 
-       * [Atlassian](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+ * [Atlassian](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
 # Resetting, Checking Out & Reverting
 
-        * [Atlassian](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
+  * [Atlassian](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
 # References
 
