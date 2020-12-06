@@ -181,17 +181,45 @@ Though there are 1000’s of articles about git, I have written this article is 
 
     # Restore all the files of the Workspace.
     $ git checkout .
-    
-### Undo Commit (Workspace <-- Staging <-- Repository )
-
-    # Undo the last commit.
-    $ git reset HEAD~1
 
 ### Revoke/Undo from Staging (Workspace <-- Staging)
 
     # Restore all files from the Staging to the Workspace.
     # Remaining the workspace unchanged.
     $ git reset
+
+    # Restore specified file from the Staging to the Workspace.
+    # Remaining the workspace unchanged.
+    $ git reset [file]
+
+    # Reset the Staging and workspace, keeping consistent with the last commit.
+    $ git reset --hard
+
+    # Reset the pointer of the current branch to pointing the specified commit while resetting the Staging, but the workspace remains unchanged.
+    $ git reset [commit]
+
+    # Reset the HEAD of the current branch to the specified commit while resetting the Staging and Workspace, keeping consistent with the specified commit.
+    $ git reset --hard [commit]
+
+    # Reset the current HEAD to the specified commit, remaining the Staging and Workspace unchanged.
+    $ git reset --keep [commit]
+
+    # Create a new commit to undo the specified commit.
+    # All changes of the latter will be offset by the former and applied to the current branch.
+    $ git revert [commit]
+
+    # Remove the uncommitted changes temporarily and move them in later.
+    $ git stash
+    $ git stash pop 
+
+
+### Revoke/Undo from Staging (Workspace <-- Staging <-- Repository)
+
+    # Restore all files from the Repository to the Workspace.
+    # Remaining the workspace unchanged.
+    # Undo the last commit.
+    # Removig arbitary/specific commit is not possible using reset
+    $ git reset HEAD~1
 
     # Restore specified file from the Staging to the Workspace.
     # Remaining the workspace unchanged.
