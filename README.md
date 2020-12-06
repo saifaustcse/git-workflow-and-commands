@@ -62,12 +62,6 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Update the changes of tracked file from the current directory to the staging.
     $ git add .
 
-### Removing files and folder from stagging
-        
-    # Removes files from your index and your working directory 
-    # Start untracking a previously tracked file
-    $ git rm filename
-
 ### Commit changes (Staging --> Repository)
 
     # Submit the code from the staging to the Repository with a message
@@ -228,6 +222,11 @@ Though there are 1000’s of articles about git, I have written this article is 
     # All changes of the latter will be offset by the former and applied to the current branch.
     $ git revert [commit]
 
+### Removing files and folder
+        
+    # Removes files from Stagging index and your working directory 
+    # Start untracking a previously tracked file
+    $ git rm filename
 
 ### Stash
 
