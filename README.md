@@ -161,15 +161,68 @@ Though there are 1000’s of articles about git, I have written this article is 
         # Display the version history of the current branch.
         $ git log
 
-        # Display the past 5 commits.
-        $ git log -5 --pretty --oneline
+        # Display all commits (Custom Filtering)
+        $ git log --all
+
+        # Display the 5 most recent commits (Custom Filtering)
+        $ git log -5
+
+        # View Commit History in ASCII Graph
+        $ git log --graph
+        
+        # Display Just One Line Per Commit
+        $ git log --oneline
+
+        # Display Just One Line Per Commit with message (Custom Formatting)
+        $ git log --pretty=oneline
 
         # Display all the users who have committed, sorted by number of commits.
         $ git shortlog -sn
 
         # Show the latest commits of the current branch.
         $ git reflog
-        
+
+  For more details:
+
+        * [The-official-Git-site](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
+        * [Atlassian](https://www.atlassian.com/git/tutorials/git-log)
+        * [Thegeekstuff](https://www.thegeekstuff.com/2014/04/git-log/)
+
+ 
+
+### Revoke
+
+        # Restore the specified file of the Staging to the Workspace.
+        $ git checkout [file]
+
+        # Restore the specified file of a certain commit to the Staging and Workspace.
+        $ git checkout [commit] [file]
+
+        # Restore all the files in the Staging to the Workspace.
+        $ git checkout .
+
+        # Reset the specified file in the Staging, keeping consistent with the previous commit, but remaining the workspace unchanged.
+        $ git reset [file]
+
+        # Reset the Staging and workspace, keeping consistent with the last commit.
+        $ git reset --hard
+
+        # Reset the pointer of the current branch to pointing the specified commit while resetting the Staging, but the workspace remains unchanged.
+        $ git reset [commit]
+
+        # Reset the HEAD of the current branch to the specified commit while resetting the Staging and Workspace, keeping consistent with the specified commit.
+        $ git reset --hard [commit]
+
+        # Reset the current HEAD to the specified commit, remaining the Staging and Workspace unchanged.
+        $ git reset --keep [commit]
+
+        # Create a new commit to undo the specified commit.
+        # All changes of the latter will be offset by the former and applied to the current branch.
+        $ git revert [commit]
+
+        # Remove the uncommitted changes temporarily and move them in later.
+        $ git stash
+        $ git stash pop
 
 ### Ignore files and folder 
 
@@ -210,40 +263,6 @@ Though there are 1000’s of articles about git, I have written this article is 
         $ git checkout -b [branch] [tag]
 
 
-### Revoke
-
-        # Restore the specified file of the Staging to the Workspace.
-        $ git checkout [file]
-
-        # Restore the specified file of a certain commit to the Staging and Workspace.
-        $ git checkout [commit] [file]
-
-        # Restore all the files in the Staging to the Workspace.
-        $ git checkout .
-
-        # Reset the specified file in the Staging, keeping consistent with the previous commit, but remaining the workspace unchanged.
-        $ git reset [file]
-
-        # Reset the Staging and workspace, keeping consistent with the last commit.
-        $ git reset --hard
-
-        # Reset the pointer of the current branch to pointing the specified commit while resetting the Staging, but the workspace remains unchanged.
-        $ git reset [commit]
-
-        # Reset the HEAD of the current branch to the specified commit while resetting the Staging and Workspace, keeping consistent with the specified commit.
-        $ git reset --hard [commit]
-
-        # Reset the current HEAD to the specified commit, remaining the Staging and Workspace unchanged.
-        $ git reset --keep [commit]
-
-        # Create a new commit to undo the specified commit.
-        # All changes of the latter will be offset by the former and applied to the current branch.
-        $ git revert [commit]
-
-        # Remove the uncommitted changes temporarily and move them in later.
-        $ git stash
-        $ git stash pop
-
 
 ### Others
 
@@ -252,7 +271,14 @@ Though there are 1000’s of articles about git, I have written this article is 
 
         # Generate a archive for releasing.
         $ git archive
-        
+
+# Merging vs. Rebasing
+
+       * [Atlassian](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
+# Resetting, Checking Out & Reverting
+
+        * [Atlassian](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
 # References
 
