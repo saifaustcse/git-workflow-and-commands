@@ -222,32 +222,32 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 ### Stash
 
-    #. Temporarily saves or stashes changes of working copy and and move them in later.
+    # Temporarily saves or stashes changes of working copy and and move them in later.
     $ git stash
 
-    #. Saving Stashes with the message
+    # Saving Stashes with the message
     $ git stash save "<Stashing Message>" 
 
-    #. Check the Stored Stashes
+    # Check the Stored Stashes
     $ git stash list  
     
-    #. Restored the changes of latest stash from stashes
-    #. Remove the latest stash from stashes
+    # Restored the changes of latest stash from stashes
+    # Remove the latest stash from stashes
     $ git stash pop
 
-    #. Restored the changes of latest stash from stashes
+    # Restored the changes of latest stash from stashes
     $ git stash apply 
   
-    #. Restored the changes of specific stash from stashes
+    # Restored the changes of specific stash from stashes
     $ git stash apply <stash id>
 
-    #. Remove the latest stash from stashes
+    # Remove the latest stash from stashes
     $ git stash drop
 
-    #. Remove the specific stash from stashes
+    # Remove the specific stash from stashes
     $ git stash drop <stash id> 
 
-    #. Remove all stashes
+    # Remove all stashes
     $ git stash clear
 
 ### Ignore files and folder 
