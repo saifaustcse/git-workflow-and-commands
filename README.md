@@ -217,7 +217,7 @@ Though there are 1000’s of articles about git, I have written this article is 
 ### Removing files or folders (Workspace --> Staging --> Repository --> Remote)
    
     # Manually delete the files or folders from Workspace
-    # The following command will permanently remove the file
+    # The following command will permanently remove the files or folders 
     $ git add .
     $ git commit -m "message"
     $ git push origin [branch]
