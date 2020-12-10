@@ -32,20 +32,12 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 ### Manage Repository
 
-   Pocess 1: Create a Repository in git hub/git lab then Clone the Repository
+   Create a Repository in git hub/git lab then Clone the Repository
    * [How to create git hub repository.](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
 
     # Download an existing git repository to your local computer with its entire code history.
     $ git clone [url]
 
-   Pocess 2: Create a Repository in local machine then add repository in git hub/git
-
-    1- $ cd to your Project
-    2- $ git init
-    3- $ git add --all or git add .
-    4- $ git commit -m "first commit"
-    5- $ git remote add origin github.com/saifaustcse/new_repository
-    6- $ git push -u origin master
        
 ### Adding files and folder (Workspace --> Staging)
 
@@ -125,7 +117,7 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Create a new branch and switch to the branch.
     $ git checkout -b [branch]
 
-    # Switch to the specified branch and update the workspace.
+    # Switch to the specified branch.
     $ git checkout [branch-name]
 
     # Switch to the previous branch.
