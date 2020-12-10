@@ -222,9 +222,33 @@ Though there are 1000’s of articles about git, I have written this article is 
 
 ### Stash
 
-    # Remove the uncommitted changes temporarily and move them in later.
+    #. Temporarily saves or stashes changes of working copy and and move them in later.
     $ git stash
+
+    #. Saving Stashes with the message
+    $ git stash save "<Stashing Message>" 
+
+    #. Check the Stored Stashes
+    $ git stash list  
+    
+    #. Restored the changes of latest stash from stashes
+    #. Remove the latest stash from stashes
     $ git stash pop
+
+    #. Restored the changes of latest stash from stashes
+    $ git stash apply 
+  
+    #. Restored the changes of specific stash from stashes
+    $ git stash apply <stash id>
+
+    #. Remove the latest stash from stashes
+    $ git stash drop
+
+    #. Remove the specific stash from stashes
+    $ git stash drop <stash id> 
+
+    #. Remove all stashes
+    $ git stash clear
 
 ### Ignore files and folder 
 
