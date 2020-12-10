@@ -66,6 +66,9 @@ followed the easiest process.
     # Display all diff information when submitting.
     $ git commit -v
 
+    # update and replace the most recent commit with a new commit
+    $ git commit --amend
+
 ### Commit changes (Workspace --> Staging --> Repository)
 
     # Submit the changes of all tracked files after the last commit.
@@ -208,6 +211,7 @@ followed the easiest process.
     # All chnages will be discard.
     # Undo the last commit.
     $ git reset --hard HEAD~1
+
  
 ### Revoke/Undo from Remote (Workspace <-- Staging <-- Repository <-- Remote)
 
@@ -262,38 +266,38 @@ followed the easiest process.
      $ git tag
 
      # Create a new tag in the current commit.
-     $ git tag [tag]
+     $ git tag [tag_name]
 
      # Create a new tag in the specified commit.
      $ git tag [tag] [commit]
 
      # Delete the local tag.
-     $ git tag -d [tag]
+     $ git tag -d [tag_name]
+
+     # Push the specified tag to remote.
+     $ git push origin [tag_name]
+
+     # Push all tags to remote.
+     $ git push origin --tag
 
      # Delete the remote tag.
-     $ git push origin :refs/tags/[tagName]
+     $ git push origin :refs/tags/[tag_name]
 
      # View the tag information.
-     $ git show [tag]
-
-     # Commit the specified tag.
-     $ git push [remote] [tag]
-
-     # Commit all tags.
-     $ git push [remote] --tags
+     $ git show [tag_name]
 
      # Create a new branch pointing to a certain tag
      $ git checkout -b [branch] [tag]
 
+     Notes:
+     # When you want to create a release point for a stable version
+     # Tag is nothing but a reference name of a commit
+     # Multiple tag name is possible for same commit
 
-### Others
+### cherry-pick 
 
       # Select a commit to be merged into the current branch.
       $ git cherry-pick [commit]
-
-      # Generate a archive for releasing.
-      $ git archive
-
 
 ### Checkout vs Reset vs Revert
 
