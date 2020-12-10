@@ -214,7 +214,7 @@ Though there are 1000’s of articles about git, I have written this article is 
     # All changes of the latter will be offset by the former and applied to the current branch.
     $ git revert [commit]
 
-### Removing files
+### Removing files from remote (Workspace --> Staging --> Repository --> Remote)
         
     # Removes files from Stagging and your working directory 
     # Start untracking a previously tracked file
@@ -223,6 +223,14 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Removes files from Stagging but the file will be remained in the Workspace.
     # Start untracking a previously tracked file
     $ git rm --cached [file]
+
+### Removing files manual process (Workspace --> Staging --> Repository --> Remote)
+   
+    # Manually delete the file from Workspace
+    # The following command will permanently remove the file
+    $ git add .
+    $ git commit -m "message"
+    $ git pull origin [branch]
         
 ### Stash
 
