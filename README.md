@@ -214,12 +214,16 @@ Though there are 1000’s of articles about git, I have written this article is 
     # All changes of the latter will be offset by the former and applied to the current branch.
     $ git revert [commit]
 
-### Removing files and folder
+### Removing files
         
-    # Removes files from Stagging index and your working directory 
+    # Removes files from Stagging and your working directory 
     # Start untracking a previously tracked file
-    $ git rm filename
+    $ git rm [file1] [file2] [fileN] 
 
+    # Removes files from Stagging but the file will be remained in the Workspace.
+    # Start untracking a previously tracked file
+    $ git rm --cached [file]
+        
 ### Stash
 
     # Temporarily saves or stashes changes of working copy and and move them in later.
@@ -250,15 +254,6 @@ Though there are 1000’s of articles about git, I have written this article is 
     # Remove all stashes
     $ git stash clear
 
-### Ignore files and folder 
-
-     # Delete the files in the Workspace and put this deletion into the Staging.
-     $ git rm [file1] [file2] ...
-
-     # Stop tracking the specified file, but the file will be remained in the Workspace.
-     $ git rm --cached [file]
-        
-
 ### Tag
 
      # List all tags.
@@ -287,7 +282,6 @@ Though there are 1000’s of articles about git, I have written this article is 
 
      # Create a new branch pointing to a certain tag
      $ git checkout -b [branch] [tag]
-
 
 
 ### Others
