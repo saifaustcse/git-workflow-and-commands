@@ -212,6 +212,7 @@ followed the easiest process.
     # Reset a Git repository to a certain commit
     # This  will delete the commits made after the certain commit
     # This is very dangerous
+    # This will create complexity if another developer already merged the update
     $ git reset --hard [commit]
     $ git push --force origin [branch]
  
@@ -219,7 +220,10 @@ followed the easiest process.
 
     # Create a new commit to undo the specified commit.
     # All changes of the latter will be offset by the former and applied to the current branch.
+    # This is safe
     $ git revert [commit]
+    $ git commit -m "message"
+    $ git push origin [branch]
   
 ### Removing files or folders (Workspace --> Staging --> Repository --> Remote)
    
