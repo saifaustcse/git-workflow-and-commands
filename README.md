@@ -208,13 +208,6 @@ followed the easiest process.
     # All chnages will be discard.
     # Undo the last commit.
     $ git reset --hard HEAD~1
-
-    # Reset a Git repository to a certain commit
-    # This  will delete the commits made after the certain commit
-    # This is very dangerous
-    # This will create complexity if another developer already merged the update
-    $ git reset --hard [commit]
-    $ git push --force origin [branch]
  
 ### Revoke/Undo from Remote (Workspace <-- Staging <-- Repository <-- Remote)
 
