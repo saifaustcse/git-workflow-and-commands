@@ -8,7 +8,7 @@ followed the easiest process.
 > If you think that these can be improved in anyway, please do suggest. Pull Request are highly appreciated. Find me if you wish [@Saif(https://www.linkedin.com/in/saif-aust-cse/).
 
 ## Workflow
- 
+
    <div  style="text-align: center;">
        <img src="https://github.com/saifaustcse/Git-workflow-and-commands/blob/main/images/workflow.png" width="750" height="450">
    <div>
@@ -16,8 +16,8 @@ followed the easiest process.
 ## Commands
 
 ### Configuration
-   
-   Git config that lets you get and set configuration variables that control all aspects of how Git looks and operates.
+
+Git config that lets you get and set configuration variables that control all aspects of how Git looks and operates.
 
     # Display the current Git configuration.
     $ git config --list
@@ -30,16 +30,18 @@ followed the easiest process.
     git config --global user.name
     git config --global user.email
 
-
 ### Manage Repository
 
-   Create a Repository in git hub/git lab then Clone the Repository
-   * [How to create git hub repository.](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
+Create a Repository in git hub/git lab then Clone the Repository
+
+-   [How to create git hub repository.](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
+
 
     # Download an existing git repository to your local computer with its entire code history.
     $ git clone [url]
 
-       
+
+
 ### Adding files and folder (Workspace --> Staging)
 
     # Add the specified file from the current directory to the staging.
@@ -98,7 +100,8 @@ followed the easiest process.
 
     # merge a branch into a target branch
     $ git merge [source branch] [target branch]
-        
+
+
 ### Workspace synchronization from remote (Workspace <-- Repository <-- Remote)
 
     # Retrieve the changes to the Remote Repository and merge with the local branch (fetch+merge)
@@ -133,7 +136,8 @@ followed the easiest process.
     # Delete the remote branch.
     $ git push origin --delete [branch-name]
     $ git branch -dr [remote/branch]
-        
+
+
 ### Inspection
 
     # Display the changed files.
@@ -163,12 +167,11 @@ followed the easiest process.
     # Show the latest commits of the current branch.
     $ git reflog
 
-  For more details:
+For more details:
 
-   * [The-official-Git-site](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
-   * [Atlassian](https://www.atlassian.com/git/tutorials/git-log)
-   * [Thegeekstuff](https://www.thegeekstuff.com/2014/04/git-log/)
-
+-   [The-official-Git-site](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
+-   [Atlassian](https://www.atlassian.com/git/tutorials/git-log)
+-   [Thegeekstuff](https://www.thegeekstuff.com/2014/04/git-log/)
 
 ### Discard changes from Workspace
 
@@ -182,11 +185,11 @@ followed the easiest process.
 
     # If unwanted file were added to the staging area but not yet committed.
     # Restore specified file from the Staging to the Workspace.
-    # Changes will stay in workspace. 
+    # Changes will stay in workspace.
     $ git reset [file]
 
     # Restore all files from the Staging to the Workspace.
-    # Changes will stay in workspace. 
+    # Changes will stay in workspace.
     $ git reset
     $ git reset HEAD .
 
@@ -212,7 +215,6 @@ followed the easiest process.
     # Undo the last commit.
     $ git reset --hard HEAD~1
 
- 
 ### Revoke/Undo from Remote (Workspace <-- Staging <-- Repository <-- Remote)
 
     # Create a new commit to undo the specified commit.
@@ -221,33 +223,34 @@ followed the easiest process.
     $ git revert [commit]
     $ git commit -m "message"
     $ git push origin [branch]
-  
+
 ### Removing files or folders (Workspace --> Staging --> Repository --> Remote)
-   
+
     # Manually delete the files or folders from Workspace
-    # The following command will permanently remove the files or folders 
+    # The following command will permanently remove the files or folders
     $ git add .
     $ git commit -m "message"
     $ git push origin [branch]
-        
+
+
 ### Stash
 
     # Temporarily saves or stashes changes of working copy and and move them in later.
     $ git stash
 
     # Saving Stashes with the message
-    $ git stash save "<Stashing Message>" 
+    $ git stash save "<Stashing Message>"
 
     # Check the Stored Stashes
-    $ git stash list  
-    
+    $ git stash list
+
     # Restored the changes of latest stash from stashes
     # Remove the latest stash from stashes
     $ git stash pop
 
     # Restored the changes of latest stash from stashes
-    $ git stash apply 
-  
+    $ git stash apply
+
     # Restored the changes of specific stash from stashes
     $ git stash apply <stash id>
 
@@ -255,7 +258,7 @@ followed the easiest process.
     $ git stash drop
 
     # Remove the specific stash from stashes
-    $ git stash drop <stash id> 
+    $ git stash drop <stash id>
 
     # Remove all stashes
     $ git stash clear
@@ -294,29 +297,27 @@ followed the easiest process.
      # Tag is nothing but a reference name of a commit
      # Multiple tag name is possible for same commit
 
-### cherry-pick 
+### cherry-pick
 
       # Select a commit to be merged into the current branch.
       $ git cherry-pick [commit]
 
 ### Checkout vs Reset vs Revert
 
-  * [Atlassian](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
-  * [Medium](https://medium.com/@manivel45/git-merge-vs-rebase-reset-vs-revert-vs-checkout-dd5674d0e18a)
-  * [opensource](https://opensource.com/article/18/6/git-reset-revert-rebase-commands)
+-   [Atlassian](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
+-   [Medium](https://medium.com/@manivel45/git-merge-vs-rebase-reset-vs-revert-vs-checkout-dd5674d0e18a)
+-   [opensource](https://opensource.com/article/18/6/git-reset-revert-rebase-commands)
 
 ### Merging vs. Rebasing
 
- * [Atlassian](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
-
+-   [Atlassian](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
 # References
 
-   I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
- 
-   * [The-official-Git-site](https://git-scm.com/book/en/v2)
-   * [Atlassian](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
-   * [Git-most-frequently-used-commands](https://medium.com/analytics-vidhya/git-most-frequently-used-commands-9df9f200c235)
-   * [Ercankaracelik](https://ercankaracelik.wordpress.com/2018/12/08/basic-git-commands/)
-   * [Tutorialdocs](https://www.tutorialdocs.com/article/git-basic-command-list.html)
+I have followed many articles but among them, the following articles are really helpful. Those articles helped me a lot and also encourage me to write this article according to my understanding.
 
+-   [The-official-Git-site](https://git-scm.com/book/en/v2)
+-   [Atlassian](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+-   [Git-most-frequently-used-commands](https://medium.com/analytics-vidhya/git-most-frequently-used-commands-9df9f200c235)
+-   [Ercankaracelik](https://ercankaracelik.wordpress.com/2018/12/08/basic-git-commands/)
+-   [Tutorialdocs](https://www.tutorialdocs.com/article/git-basic-command-list.html)
