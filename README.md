@@ -37,7 +37,7 @@ Create a Repository in git hub/git lab then Clone the Repository
 -   [How to create git hub repository.](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
 
 
-    # Download an existing git repository to your local computer with its entire code history.
+### Download an existing git repository to your local computer with its entire code history.
     $ git clone [url]
 
 
