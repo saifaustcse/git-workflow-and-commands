@@ -3,9 +3,9 @@
 Though there are 1000’s of articles about git, I have written this article is in order to document what I understood and how I understood which may help others as well. Here I tried to avoid complexity and wanted to keep it simple and
 followed the easiest process.
 
-# Find me if you wish
+## Give a Star! :star:
 
-> If you think that these can be improved in anyway, please do suggest. Pull Request are highly appreciated. Find me if you wish [@Saif(https://www.linkedin.com/in/saif-aust-cse/).
+If you like or are using this project to learn or start your solution, please give it a star. Thanks!
 
 ## Workflow
 
