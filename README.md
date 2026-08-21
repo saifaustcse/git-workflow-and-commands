@@ -63,7 +63,7 @@ Every command in this guide simply moves changes from one area to another — ke
 # Display the current Git configuration.
 $ git config --list
 
-# Set the user information when submitting code.
+# Set your identity used in commits.
 $ git config --global user.name "Saiful Islam"
 $ git config --global user.email "saifaustcse26@gmail.com"
 
@@ -81,7 +81,7 @@ Create a repository in GitHub/GitLab, then clone the repository.
 - [How to create a GitHub repository](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
 
 ```bash
-# Download an existing Git repository to your local computer with its entire code history.
+# Clone an existing repository with its full history.
 $ git clone [url]
 ```
 
@@ -92,17 +92,13 @@ $ git clone [url]
 Moves changes from the **Workspace** to the **Staging** area.
 
 ```bash
-# Add the specified files from the current directory to the staging.
-# Start tracking untracked files.
+# Add specified files to staging. (starts tracking new files)
 $ git add [file1] [file2] [fileN]
 
-# Add the specified directory from the current directory to the staging, including subdirectories.
-# Start tracking an untracked directory.
+# Add a directory, including subdirectories, to staging.
 $ git add [dir]
 
-# Add all files (tracked or untracked) from the current directory to the staging.
-# Start tracking untracked files.
-# Update the changes of tracked files from the current directory to the staging.
+# Add all files (tracked or untracked) to staging.
 $ git add .
 ```
 
@@ -113,23 +109,23 @@ $ git add .
 Submits the staged code to the local **Repository** with a message.
 
 ```bash
-# Submit the code from the staging to the repository with a message.
+# Commit staged changes with a message.
 $ git commit -m [message]
 
-# Submit the specified files from the staging to the repository.
+# Commit only the specified files.
 $ git commit [file1] [file2] [fileN] -m [message]
 
-# Display all diff information when submitting.
+# Show the diff while committing.
 $ git commit -v
 
-# Update and replace the most recent commit with a new commit.
+# Amend (replace) the most recent commit.
 $ git commit --amend
 ```
 
 Commit directly from the **Workspace** to the **Repository** (skips explicit staging):
 
 ```bash
-# Submit the changes of all tracked files after the last commit.
+# Stage and commit all changes of tracked files.
 $ git commit -am [message]
 
 # For untracked files, stage them first.
@@ -154,12 +150,10 @@ $ git fetch origin [branch]
 $ git fetch --all
 
 # Merge the specified branch into the current branch. (Workspace <-- Repository)
+# Note: git merge always merges into the current branch.
 $ git merge [branch]
 
-# Merge a branch into a target branch.
-$ git merge [source branch] [target branch]
-
-# Retrieve the changes from the remote repository and merge them with the local branch. (fetch + merge)
+# Fetch remote changes and merge them into the current branch. (fetch + merge)
 $ git pull origin [branch]
 ```
 
@@ -227,10 +221,10 @@ $ git log --oneline
 # Display just one line per commit with message. (custom formatting)
 $ git log --pretty=oneline
 
-# Display all the users who have committed, sorted by number of commits.
+# Show committers ranked by number of commits.
 $ git shortlog -sn
 
-# Show the latest commits of the current branch.
+# Show history of HEAD movements. (useful to recover lost commits)
 $ git reflog
 ```
 
@@ -258,49 +252,38 @@ $ git checkout .
 ### Revoke/Undo from Staging (Workspace ← Staging)
 
 ```bash
-# If unwanted files were added to the staging area but not yet committed.
-# Restore specified file from the staging to the workspace.
-# Changes will stay in the workspace.
+# Unstage a file. (changes stay in the workspace)
 $ git reset [file]
 
-# Restore all files from the staging to the workspace.
-# Changes will stay in the workspace.
+# Unstage all files. (changes stay in the workspace)
 $ git reset
 $ git reset HEAD .
 
-# Restore all files from the staging to the workspace.
-# All changes will be discarded.
+# Unstage all files and discard the changes.
 $ git reset --hard
 ```
 
 ### Revoke/Undo from Repository (Workspace ← Staging ← Repository)
 
 ```bash
-# Restore all files from the repository to the workspace.
-# All changes will stay in the workspace.
-# Undo the last commit.
+# Undo the last commit. (changes stay in the workspace)
 $ git reset HEAD~1
 $ git reset --mixed HEAD~1
 
-# Restore all files from the repository to the staging.
-# All changes will stay in the staging.
-# Undo the last commit.
+# Undo the last commit. (changes stay staged)
 $ git reset --soft HEAD~1
 
-# Restore all files from the repository to the workspace.
-# All changes will be discarded.
-# Undo the last commit.
+# Undo the last commit and discard all changes.
 $ git reset --hard HEAD~1
 ```
 
 ### Revoke/Undo from Remote (Workspace ← Staging ← Repository ← Remote)
 
 ```bash
-# Create a new commit to undo the specified commit.
+# Create a new commit that undoes the changes of the specified commit.
 # All changes of the latter will be offset by the former and applied to the current branch.
-# This is safe.
+# This is safe for shared branches. (a commit is created automatically)
 $ git revert [commit]
-$ git commit -m "message"
 $ git push origin [branch]
 ```
 
@@ -311,8 +294,7 @@ $ git push origin [branch]
 Permanently removes files or folders from the **Workspace**, the **Repository**, and the **Remote**.
 
 ```bash
-# Manually delete the files or folders from the workspace.
-# The following commands will permanently remove the files or folders.
+# Delete files/folders manually, then record the removal permanently.
 $ git add .
 $ git commit -m "message"
 $ git push origin [branch]
@@ -325,29 +307,28 @@ $ git push origin [branch]
 > **Stash temporarily saves (or stashes) changes of the working copy so you can move them in later, letting you switch branches without committing unfinished work.**
 
 ```bash
-# Temporarily save or stash changes of the working copy and move them in later.
+# Temporarily save current changes.
 $ git stash
 
-# Saving stashes with a message.
+# Save a stash with a message.
 $ git stash save "<Stashing Message>"
 
-# Check the stored stashes.
+# List stored stashes.
 $ git stash list
 
-# Restore the changes of the latest stash from stashes.
-# Remove the latest stash from stashes.
+# Apply the latest stash and remove it from the list.
 $ git stash pop
 
-# Restore the changes of the latest stash from stashes.
+# Apply the latest stash. (keeps it in the list)
 $ git stash apply
 
-# Restore the changes of a specific stash from stashes.
+# Apply a specific stash.
 $ git stash apply <stash id>
 
-# Remove the latest stash from stashes.
+# Remove the latest stash.
 $ git stash drop
 
-# Remove a specific stash from stashes.
+# Remove a specific stash.
 $ git stash drop <stash id>
 
 # Remove all stashes.
@@ -364,10 +345,10 @@ $ git stash clear
 # List all tags.
 $ git tag
 
-# Create a new tag in the current commit.
+# Tag the current commit.
 $ git tag [tag_name]
 
-# Create a new tag in the specified commit.
+# Tag a specific commit.
 $ git tag [tag] [commit]
 
 # Delete the local tag.
@@ -377,7 +358,7 @@ $ git tag -d [tag_name]
 $ git push origin [tag_name]
 
 # Push all tags to remote.
-$ git push origin --tag
+$ git push origin --tags
 
 # Delete the remote tag.
 $ git push origin :refs/tags/[tag_name]
@@ -394,7 +375,7 @@ $ git checkout -b [branch] [tag]
 ## 13. Cherry-pick
 
 ```bash
-# Select a commit to be merged into the current branch.
+# Copy a single commit onto the current branch.
 $ git cherry-pick [commit]
 ```
 
